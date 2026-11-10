@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="iHandshake" Datatype="Int" />
+    <Member Name="Alarm" Datatype="Struct">
+      <Member Name="bE0000_KonfigAlarm" Datatype="Bool" />
+      <Member Name="bE0001_Reserviert" Datatype="Bool" />
+      <Member Name="bE0002_InvUngueltig" Datatype="Bool" />
+      <Member Name="bE0003_Reserviert" Datatype="Bool" />
+      <Member Name="bE0004_Reserviert" Datatype="Bool" />
+      <Member Name="bE0005_Reserviert" Datatype="Bool" />
+      <Member Name="bE0006_WasserüberdruckZuTief" Datatype="Bool" />
+      <Member Name="bE0007_Reserviert" Datatype="Bool" />
+      <Member Name="bE0008_Reserviert" Datatype="Bool" />
+      <Member Name="bE0009_Reserviert" Datatype="Bool" />
+      <Member Name="bE0010_KondensatorpumpeAlarmBetrieb" Datatype="Bool" />
+      <Member Name="bE0011_KondensatorpumpeAlarmStillstand" Datatype="Bool" />
+      <Member Name="bE0012_KonfigAlarmVDMinVerflüssigungstemp" Datatype="Bool" />
+      <Member Name="bE0013_KonfigAlarmCOPVerdichter" Datatype="Bool" />
+      <Member Name="bE0014_DurchflussstörungKondImBetrieb" Datatype="Bool" />
+      <Member Name="bE0015_DurchflussstörungKondIBeimStart" Datatype="Bool" />
+      <Member Name="bE0016_DurchflussstörungKondImStillstand" Datatype="Bool" />
+      <Member Name="bE0017_AbsperrklappeEintrittNichtOffen" Datatype="Bool" />
+      <Member Name="bE0018_AbsperrklappeEintrittNichtZu" Datatype="Bool" />
+      <Member Name="bE0019_AbsperrklappeAustrittNichtOffen" Datatype="Bool" />
+      <Member Name="bE0020_AbsperrklappeAustrittNichtZu" Datatype="Bool" />
+      <Member Name="bE0021_NH3inSekundärkreis" Datatype="Bool" />
+      <Member Name="bE0022_T-EintrittMaxblockiertVerdichterstart" Datatype="Bool" />
+      <Member Name="bE0023_StörungRegelventilAbscheider1" Datatype="Bool" />
+      <Member Name="bE0024_StörungRegelventilAbscheider2" Datatype="Bool" />
+      <Member Name="bE0025_ExternFehler" Datatype="Bool" />
+      <Member Name="b052_Reserve" Datatype="Bool" />
+      <Member Name="b053_Reserve" Datatype="Bool" />
+      <Member Name="b054_Reserve" Datatype="Bool" />
+      <Member Name="b055_Reserve" Datatype="Bool" />
+      <Member Name="b056_Reserve" Datatype="Bool" />
+      <Member Name="b057_Reserve" Datatype="Bool" />
+      <Member Name="by06_Reserve" Datatype="Byte" />
+      <Member Name="by07_Reserve" Datatype="Byte" />
+      <Member Name="by08_Reserve" Datatype="Byte" />
+      <Member Name="by09_Reserve" Datatype="Byte" />
+      <Member Name="by10_Reserve" Datatype="Byte" />
+      <Member Name="by11_Reserve" Datatype="Byte" />
+      <Member Name="by12_Reserve" Datatype="Byte" />
+      <Member Name="by13_Reserve" Datatype="Byte" />
+      <Member Name="by14_Reserve" Datatype="Byte" />
+      <Member Name="by15_Reserve" Datatype="Byte" />
+      <Member Name="by16_Reserve" Datatype="Byte" />
+      <Member Name="by17_Reserve" Datatype="Byte" />
+      <Member Name="by18_Reserve" Datatype="Byte" />
+      <Member Name="by19_Reserve" Datatype="Byte" />
+      <Member Name="by20_Reserve" Datatype="Byte" />
+      <Member Name="by21_Reserve" Datatype="Byte" />
+      <Member Name="by22_Reserve" Datatype="Byte" />
+      <Member Name="by23_Reserve" Datatype="Byte" />
+      <Member Name="by24_Reserve" Datatype="Byte" />
+      <Member Name="by25_Reserve" Datatype="Byte" />
+      <Member Name="by26_Reserve" Datatype="Byte" />
+      <Member Name="bE0200_AlarmKabelbruch" Datatype="Bool" />
+      <Member Name="b271_Reserve" Datatype="Bool" />
+      <Member Name="b272_Reserve" Datatype="Bool" />
+      <Member Name="b273_Reserve" Datatype="Bool" />
+      <Member Name="b274_Reserve" Datatype="Bool" />
+      <Member Name="b275_Reserve" Datatype="Bool" />
+      <Member Name="b276_Reserve" Datatype="Bool" />
+      <Member Name="b277_Reserve" Datatype="Bool" />
+      <Member Name="by28_Reserve" Datatype="Byte" />
+      <Member Name="by29_Reserve" Datatype="Byte" />
+      <Member Name="by30_Reserve" Datatype="Byte" />
+      <Member Name="by31_Reserve" Datatype="Byte" />
+      <Member Name="by32_Reserve" Datatype="Byte" />
+      <Member Name="by33_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Warnung" Datatype="Struct">
+      <Member Name="bA1000_Reserviert" Datatype="Bool" />
+      <Member Name="bA1001_SlaveAusg" Datatype="Bool" />
+      <Member Name="bA1002_Reserviert" Datatype="Bool" />
+      <Member Name="bA1003_HauptMasterAusg" Datatype="Bool" />
+      <Member Name="bA1004_MehrereKondensatorMasterAktiv" Datatype="Bool" />
+      <Member Name="bA1005_ObjektIDMehrfachVorhanden" Datatype="Bool" />
+      <Member Name="bA1006_Reserviert" Datatype="Bool" />
+      <Member Name="bA1007_WassereingangstemperaturZuTief" Datatype="Bool" />
+      <Member Name="bA1008_WarnungNiveauEndschalter" Datatype="Bool" />
+      <Member Name="bA1009_WarnungNiveau2Endschalter" Datatype="Bool" />
+      <Member Name="bA1010_Reserviert" Datatype="Bool" />
+      <Member Name="bA1011_Reserviert" Datatype="Bool" />
+      <Member Name="bA1012_Reserviert" Datatype="Bool" />
+      <Member Name="bA1013_Reserviert" Datatype="Bool" />
+      <Member Name="bA1014_Reserviert" Datatype="Bool" />
+      <Member Name="bA1015_Reserviert" Datatype="Bool" />
+      <Member Name="bA1016_Reserviert" Datatype="Bool" />
+      <Member Name="b361_Reserve" Datatype="Bool" />
+      <Member Name="b362_Reserve" Datatype="Bool" />
+      <Member Name="b363_Reserve" Datatype="Bool" />
+      <Member Name="b364_Reserve" Datatype="Bool" />
+      <Member Name="b365_Reserve" Datatype="Bool" />
+      <Member Name="b366_Reserve" Datatype="Bool" />
+      <Member Name="b367_Reserve" Datatype="Bool" />
+      <Member Name="by37_Reserve" Datatype="Byte" />
+      <Member Name="by38_Reserve" Datatype="Byte" />
+      <Member Name="by39_Reserve" Datatype="Byte" />
+      <Member Name="by40_Reserve" Datatype="Byte" />
+      <Member Name="by41_Reserve" Datatype="Byte" />
+      <Member Name="by42_Reserve" Datatype="Byte" />
+      <Member Name="by43_Reserve" Datatype="Byte" />
+      <Member Name="by44_Reserve" Datatype="Byte" />
+      <Member Name="by45_Reserve" Datatype="Byte" />
+      <Member Name="by46_Reserve" Datatype="Byte" />
+      <Member Name="by47_Reserve" Datatype="Byte" />
+      <Member Name="by48_Reserve" Datatype="Byte" />
+      <Member Name="by49_Reserve" Datatype="Byte" />
+      <Member Name="by50_Reserve" Datatype="Byte" />
+      <Member Name="by51_Reserve" Datatype="Byte" />
+      <Member Name="by52_Reserve" Datatype="Byte" />
+      <Member Name="by53_Reserve" Datatype="Byte" />
+      <Member Name="by54_Reserve" Datatype="Byte" />
+      <Member Name="by55_Reserve" Datatype="Byte" />
+      <Member Name="by56_Reserve" Datatype="Byte" />
+      <Member Name="by57_Reserve" Datatype="Byte" />
+      <Member Name="by58_Reserve" Datatype="Byte" />
+      <Member Name="bA1200_WarnungKabelbruch" Datatype="Bool" />
+      <Member Name="b591_Reserve" Datatype="Bool" />
+      <Member Name="b592_Reserve" Datatype="Bool" />
+      <Member Name="b593_Reserve" Datatype="Bool" />
+      <Member Name="b594_Reserve" Datatype="Bool" />
+      <Member Name="b595_Reserve" Datatype="Bool" />
+      <Member Name="b596_Reserve" Datatype="Bool" />
+      <Member Name="b597_Reserve" Datatype="Bool" />
+      <Member Name="by60_Reserve" Datatype="Byte" />
+      <Member Name="by61_Reserve" Datatype="Byte" />
+      <Member Name="by62_Reserve" Datatype="Byte" />
+      <Member Name="by63_Reserve" Datatype="Byte" />
+      <Member Name="by64_Reserve" Datatype="Byte" />
+      <Member Name="by65_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Zustand" Datatype="Struct">
+      <Member Name="bAlarmzustandAktiv" Datatype="Bool" />
+      <Member Name="bWarnzustandAktiv" Datatype="Bool" />
+      <Member Name="bSystemMeldungAktiv" Datatype="Bool" />
+      <Member Name="bSeviceMeldungAktiv" Datatype="Bool" />
+      <Member Name="bStopManuell" Datatype="Bool" />
+      <Member Name="bStopAuto" Datatype="Bool" />
+      <Member Name="bStopExtern" Datatype="Bool" />
+      <Member Name="bBetriebAuto" Datatype="Bool" />
+      <Member Name="bBetriebManuell" Datatype="Bool" />
+      <Member Name="bAnlaufAuto" Datatype="Bool" />
+      <Member Name="bAnlaufManuell" Datatype="Bool" />
+      <Member Name="bManuellStoppen" Datatype="Bool" />
+      <Member Name="b674_Reserve" Datatype="Bool" />
+      <Member Name="b675_Reserve" Datatype="Bool" />
+      <Member Name="b676_Reserve" Datatype="Bool" />
+      <Member Name="b677_Reserve" Datatype="Bool" />
+      <Member Name="by68_Reserve" Datatype="Byte" />
+      <Member Name="by69_Reserve" Datatype="Byte" />
+      <Member Name="bInventarAufnahme" Datatype="Bool" />
+      <Member Name="b701_Reserve" Datatype="Bool" />
+      <Member Name="bStandbyMasterInit" Datatype="Bool" />
+      <Member Name="bStandbyMasterPassiv" Datatype="Bool" />
+      <Member Name="bStandbyMasterAktiv" Datatype="Bool" />
+      <Member Name="bNotbetriebAktiv" Datatype="Bool" />
+      <Member Name="bMasterGesperrt" Datatype="Bool" />
+      <Member Name="bSollwertAnhebung" Datatype="Bool" />
+      <Member Name="bKondEintrittWarm" Datatype="Bool" />
+      <Member Name="bIstwertVentilfühler" Datatype="Bool" />
+      <Member Name="bIstwertPDruck" Datatype="Bool" />
+      <Member Name="bKondensatorpumpeManuell" Datatype="Bool" />
+      <Member Name="bAbsperrklappenOeffnen" Datatype="Bool" />
+      <Member Name="bAbsperrklappenSchliessen" Datatype="Bool" />
+      <Member Name="b716_Reserve" Datatype="Bool" />
+      <Member Name="b717_Reserve" Datatype="Bool" />
+      <Member Name="by72_Reserve" Datatype="Byte" />
+      <Member Name="by73_Reserve" Datatype="Byte" />
+      <Member Name="by74_Reserve" Datatype="Byte" />
+      <Member Name="by75_Reserve" Datatype="Byte" />
+      <Member Name="by76_Reserve" Datatype="Byte" />
+      <Member Name="by77_Reserve" Datatype="Byte" />
+      <Member Name="by78_Reserve" Datatype="Byte" />
+      <Member Name="by79_Reserve" Datatype="Byte" />
+      <Member Name="by80_Reserve" Datatype="Byte" />
+      <Member Name="by81_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Allgemeine Meldungen" Datatype="Struct">
+      <Member Name="b4000_AllgemeineMeldung_1" Datatype="Bool" />
+      <Member Name="b4001_AllgemeineMeldung_2" Datatype="Bool" />
+      <Member Name="b4002_AllgemeineMeldung_3" Datatype="Bool" />
+      <Member Name="b4003_AllgemeineMeldung_4" Datatype="Bool" />
+      <Member Name="b4004_AllgemeineMeldung_5" Datatype="Bool" />
+      <Member Name="b4005_AllgemeineMeldung_6" Datatype="Bool" />
+      <Member Name="b4006_AllgemeineMeldung_7" Datatype="Bool" />
+      <Member Name="b4007_AllgemeineMeldung_8" Datatype="Bool" />
+      <Member Name="by83_Reserve" Datatype="Byte" />
+      <Member Name="by84_Reserve" Datatype="Byte" />
+      <Member Name="by85_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigIn" Datatype="Struct">
+      <Member Name="b860_Reserve" Datatype="Bool" />
+      <Member Name="bSollwertB" Datatype="Bool" />
+      <Member Name="b862_Reserve" Datatype="Bool" />
+      <Member Name="bNiveauregFreigabe" Datatype="Bool" />
+      <Member Name="bNiveaureg2Freigabe" Datatype="Bool" />
+      <Member Name="bWasserüberdruck" Datatype="Bool" />
+      <Member Name="bNiveauEndschalterOffen" Datatype="Bool" />
+      <Member Name="bNiveauEndschalterGeschlossen" Datatype="Bool" />
+      <Member Name="bNiveau2EnschalterOffen" Datatype="Bool" />
+      <Member Name="bNiveau2EnschalterGeschlossen" Datatype="Bool" />
+      <Member Name="bEndschalterAbsperrklappeEintrittOffen" Datatype="Bool" />
+      <Member Name="bEndschalterAbsperrklappeEintrittZu" Datatype="Bool" />
+      <Member Name="bEndschalterAbsperrklappeAustrittOffen" Datatype="Bool" />
+      <Member Name="bEndschalterAbsperrklappeAustrittZu" Datatype="Bool" />
+      <Member Name="bNH3AlarmSekundärkreis" Datatype="Bool" />
+      <Member Name="b877_Reserve" Datatype="Bool" />
+      <Member Name="by88_Reserve" Datatype="Byte" />
+      <Member Name="by89_Reserve" Datatype="Byte" />
+      <Member Name="by90_Reserve" Datatype="Byte" />
+      <Member Name="by91_Reserve" Datatype="Byte" />
+      <Member Name="by92_Reserve" Datatype="Byte" />
+      <Member Name="by93_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigOut" Datatype="Struct">
+      <Member Name="b940_Reserve" Datatype="Bool" />
+      <Member Name="b941_Reserve" Datatype="Bool" />
+      <Member Name="bKondensatorpumpe" Datatype="Bool" />
+      <Member Name="bNiveauregelung" Datatype="Bool" />
+      <Member Name="bNiveauregelung2" Datatype="Bool" />
+      <Member Name="bNiveauregelungDO" Datatype="Bool" />
+      <Member Name="bNiveauregelung2DO" Datatype="Bool" />
+      <Member Name="bAbsperrklappeEintritt" Datatype="Bool" />
+      <Member Name="bAbsperrklappeAustritt" Datatype="Bool" />
+      <Member Name="b951_Reserve" Datatype="Bool" />
+      <Member Name="b952_Reserve" Datatype="Bool" />
+      <Member Name="b953_Reserve" Datatype="Bool" />
+      <Member Name="b954_Reserve" Datatype="Bool" />
+      <Member Name="b955_Reserve" Datatype="Bool" />
+      <Member Name="b956_Reserve" Datatype="Bool" />
+      <Member Name="b957_Reserve" Datatype="Bool" />
+      <Member Name="by96_Reserve" Datatype="Byte" />
+      <Member Name="by97_Reserve" Datatype="Byte" />
+      <Member Name="by98_Reserve" Datatype="Byte" />
+      <Member Name="by99_Reserve" Datatype="Byte" />
+      <Member Name="by100_Reserve" Datatype="Byte" />
+      <Member Name="by101_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="ch1021_Reserve" Datatype="Char" />
+    <Member Name="chKondReglerEinheit" Datatype="Char" />
+    <Member Name="rKondReglerIstwert" Datatype="Real" />
+    <Member Name="rKondReglerSollwert" Datatype="Real" />
+    <Member Name="rKondReglerAusgang" Datatype="Real" />
+    <Member Name="rKondReglerStufen" Datatype="Int" />
+    <Member Name="rKondEintrittstemperatur" Datatype="Real" />
+    <Member Name="rKondAustrittstemperatur" Datatype="Real" />
+    <Member Name="rAussentemperatur" Datatype="Real" />
+    <Member Name="liSollwertUmschaltungStatus" Datatype="DInt" />
+    <Member Name="rKondPISollwert" Datatype="Real" />
+    <Member Name="rKondPIReglerIstwert" Datatype="Real" />
+    <Member Name="rStellwert2Kd" Datatype="Real" />
+    <Member Name="rKondensatorpumpe" Datatype="Real" />
+    <Member Name="rKondDreiwegventil" Datatype="Real" />
+    <Member Name="rFeuchtkugeltemperatur" Datatype="Real" />
+    <Member Name="rT_Ventilfühler" Datatype="Real" />
+    <Member Name="rNiveau" Datatype="Real" />
+    <Member Name="rNiveauregulierung" Datatype="Real" />
+    <Member Name="rNiveau2" Datatype="Real" />
+    <Member Name="rNiveauregulierung2" Datatype="Real" />
+    <Member Name="rVolumenstrom" Datatype="Real" />
+    <Member Name="rThermischeLeistung" Datatype="Real" />
+    <Member Name="rCOPVerdichter" Datatype="Real" />
+    <Member Name="rCOPAnlage" Datatype="Real" />
+    <Member Name="rWasserüberdruck" Datatype="Real" />
+    <Member Name="rAuxAnalog1" Datatype="Real" />
+    <Member Name="rAuxAnalog2" Datatype="Real" />
+    <Member Name="rAuxAnalog3" Datatype="Real" />
+    <Member Name="rAuxAnalog4" Datatype="Real" />
+    <Member Name="byReserve" Datatype="Array[214..629] of Byte" />
+  </Section>
+</Sections></Interface>
+      <Name>WT3_Kondensator_Status_UDT</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

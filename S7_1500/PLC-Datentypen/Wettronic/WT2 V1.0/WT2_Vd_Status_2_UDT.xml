@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="iHandshake" Datatype="Int" />
+    <Member Name="Fehler" Datatype="Struct">
+      <Member Name="bE0128_Reserviert" Datatype="Bool" />
+      <Member Name="bE0129_Reserviert" Datatype="Bool" />
+      <Member Name="bE0130_Reserviert" Datatype="Bool" />
+      <Member Name="bE0131_Reserviert" Datatype="Bool" />
+      <Member Name="bE0132_Reserviert" Datatype="Bool" />
+      <Member Name="bE0133_Reserviert" Datatype="Bool" />
+      <Member Name="bE0134_Reserviert" Datatype="Bool" />
+      <Member Name="bE0135_Reserviert" Datatype="Bool" />
+      <Member Name="bE0136_Reserviert" Datatype="Bool" />
+      <Member Name="bE0137_Reserviert" Datatype="Bool" />
+      <Member Name="bE0138_VorschmNoetig" Datatype="Bool" />
+      <Member Name="bE0139_KonfigFehlerHaltebetr" Datatype="Bool" />
+      <Member Name="bE0140_FehlerTTOPHKZuTief" Datatype="Bool" />
+      <Member Name="bE0141_FehlerTTOPHKZuHoch" Datatype="Bool" />
+      <Member Name="bE0142_KonfigFehlerKeinDefVi" Datatype="Bool" />
+      <Member Name="b37_Reserve" Datatype="Bool" />
+      <Member Name="by04_Reserve" Datatype="Byte" />
+      <Member Name="by05_Reserve" Datatype="Byte" />
+      <Member Name="by06_Reserve" Datatype="Byte" />
+      <Member Name="by07_Reserve" Datatype="Byte" />
+      <Member Name="by08_Reserve" Datatype="Byte" />
+      <Member Name="by09_Reserve" Datatype="Byte" />
+      <Member Name="by10_Reserve" Datatype="Byte" />
+      <Member Name="by11_Reserve" Datatype="Byte" />
+      <Member Name="by12_Reserve" Datatype="Byte" />
+      <Member Name="by13_Reserve" Datatype="Byte" />
+      <Member Name="by14_Reserve" Datatype="Byte" />
+      <Member Name="by15_Reserve" Datatype="Byte" />
+      <Member Name="by16_Reserve" Datatype="Byte" />
+      <Member Name="by17_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Alarm" Datatype="Struct">
+      <Member Name="bA1128_Vorschm3Tagen" Datatype="Bool" />
+      <Member Name="bA1129_Vorschm2Tagen" Datatype="Bool" />
+      <Member Name="bA1130_Vorschm1Tag" Datatype="Bool" />
+      <Member Name="bA1131_Reserviert" Datatype="Bool" />
+      <Member Name="bA1132_Reserviert" Datatype="Bool" />
+      <Member Name="bA1133_Reserviert" Datatype="Bool" />
+      <Member Name="bA1134_Reserviert" Datatype="Bool" />
+      <Member Name="bA1135_Reserviert" Datatype="Bool" />
+      <Member Name="bA1136_Reserviert" Datatype="Bool" />
+      <Member Name="bA1137_Reserviert" Datatype="Bool" />
+      <Member Name="bA1138_Reserviert" Datatype="Bool" />
+      <Member Name="bA1139_Reserviert" Datatype="Bool" />
+      <Member Name="bA1140_AlarmTTOPHKZuTief" Datatype="Bool" />
+      <Member Name="bA1141_AlarmTTOPHKZuHoch" Datatype="Bool" />
+      <Member Name="bA1142_Reserviert" Datatype="Bool" />
+      <Member Name="b197_Reserve" Datatype="Bool" />
+      <Member Name="by20_Reserve" Datatype="Byte" />
+      <Member Name="by21_Reserve" Datatype="Byte" />
+      <Member Name="by22_Reserve" Datatype="Byte" />
+      <Member Name="by23_Reserve" Datatype="Byte" />
+      <Member Name="by24_Reserve" Datatype="Byte" />
+      <Member Name="by25_Reserve" Datatype="Byte" />
+      <Member Name="by26_Reserve" Datatype="Byte" />
+      <Member Name="by27_Reserve" Datatype="Byte" />
+      <Member Name="by28_Reserve" Datatype="Byte" />
+      <Member Name="by29_Reserve" Datatype="Byte" />
+      <Member Name="by30_Reserve" Datatype="Byte" />
+      <Member Name="by31_Reserve" Datatype="Byte" />
+      <Member Name="by32_Reserve" Datatype="Byte" />
+      <Member Name="by33_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Zustand" Datatype="Struct">
+      <Member Name="by34_Reserve" Datatype="Byte" />
+      <Member Name="by35_Reserve" Datatype="Byte" />
+      <Member Name="by36_Reserve" Datatype="Byte" />
+      <Member Name="by37_Reserve" Datatype="Byte" />
+      <Member Name="by38_Reserve" Datatype="Byte" />
+      <Member Name="by39_Reserve" Datatype="Byte" />
+      <Member Name="by40_Reserve" Datatype="Byte" />
+      <Member Name="by41_Reserve" Datatype="Byte" />
+      <Member Name="by42_Reserve" Datatype="Byte" />
+      <Member Name="by43_Reserve" Datatype="Byte" />
+      <Member Name="by44_Reserve" Datatype="Byte" />
+      <Member Name="by45_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigIn" Datatype="Struct">
+      <Member Name="by46_Reserve" Datatype="Byte" />
+      <Member Name="by47_Reserve" Datatype="Byte" />
+      <Member Name="by48_Reserve" Datatype="Byte" />
+      <Member Name="by49_Reserve" Datatype="Byte" />
+      <Member Name="by50_Reserve" Datatype="Byte" />
+      <Member Name="by51_Reserve" Datatype="Byte" />
+      <Member Name="by52_Reserve" Datatype="Byte" />
+      <Member Name="by53_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigOut" Datatype="Struct">
+      <Member Name="by54_Reserve" Datatype="Byte" />
+      <Member Name="by55_Reserve" Datatype="Byte" />
+      <Member Name="by56_Reserve" Datatype="Byte" />
+      <Member Name="by57_Reserve" Datatype="Byte" />
+      <Member Name="by58_Reserve" Datatype="Byte" />
+      <Member Name="by59_Reserve" Datatype="Byte" />
+      <Member Name="by60_Reserve" Datatype="Byte" />
+      <Member Name="by61_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="rNDAbscheiderNiveau" Datatype="Real" />
+    <Member Name="rEconomiserNiveau" Datatype="Real" />
+    <Member Name="rTVerdichterkühlAustritt" Datatype="Real" />
+    <Member Name="rTZwStufeSaugHD" Datatype="Real" />
+    <Member Name="rTEconomiser" Datatype="Real" />
+    <Member Name="rTTOPHeizenKühlen" Datatype="Real" />
+    <Member Name="rEconomiserAnalog" Datatype="Real" />
+    <Member Name="rUeberhitzungsventil" Datatype="Real" />
+    <Member Name="rAnlaufentlastungAnalog" Datatype="Real" />
+    <Member Name="rOelpumpenAusgang" Datatype="Real" />
+    <Member Name="rEcoNiveaureglerAusgang" Datatype="Real" />
+    <Member Name="diLaeuftSeit" Datatype="DInt" />
+    <Member Name="rCPos" Datatype="Real" />
+    <Member Name="rReserveReal" Datatype="Array[0..215] of Real" />
+  </Section>
+</Sections></Interface>
+      <Name>WT2_Vd_Status_2_UDT</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

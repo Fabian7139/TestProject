@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="iHandshake" Datatype="Int" />
+    <Member Name="Fehler" Datatype="Struct">
+      <Member Name="bE0000_KonfigFehler" Datatype="Bool" />
+      <Member Name="bE0001_VerbundMasterAusg" Datatype="Bool" />
+      <Member Name="bE0002_NotstoppPHDFehler" Datatype="Bool" />
+      <Member Name="bE0003_ExternFehler" Datatype="Bool" />
+      <Member Name="bE0004_TDruckFehler" Datatype="Bool" />
+      <Member Name="bE0005_PDruckFehler" Datatype="Bool" />
+      <Member Name="bE0006_PSaugFehler" Datatype="Bool" />
+      <Member Name="bE0007_TMotorFehler" Datatype="Bool" />
+      <Member Name="bE0008_TSHMinSaugFehler" Datatype="Bool" />
+      <Member Name="bE0009_TSHMinDruckFehler" Datatype="Bool" />
+      <Member Name="bE0010_LuefterFehler" Datatype="Bool" />
+      <Member Name="bE0011_Reserviert" Datatype="Bool" />
+      <Member Name="bE0012_PhasenFehler" Datatype="Bool" />
+      <Member Name="bE0013_MotorFehler" Datatype="Bool" />
+      <Member Name="bE0014_LSAusloesung" Datatype="Bool" />
+      <Member Name="bE0015_POeldiffStillstand" Datatype="Bool" />
+      <Member Name="bE0016_POeldiffBetrieb" Datatype="Bool" />
+      <Member Name="bE0017_TOelMaxFehler" Datatype="Bool" />
+      <Member Name="bE0018_OElniveauOA" Datatype="Bool" />
+      <Member Name="bE0019_OElniveauVd" Datatype="Bool" />
+      <Member Name="bE0020_OElStroemung" Datatype="Bool" />
+      <Member Name="bE0021_POelfilterBetrieb" Datatype="Bool" />
+      <Member Name="bE0022_TLagerDEFehler" Datatype="Bool" />
+      <Member Name="bE0023_TLager_NDEFehler" Datatype="Bool" />
+      <Member Name="bE0024_Reserviert" Datatype="Bool" />
+      <Member Name="bE0025_Reserviert" Datatype="Bool" />
+      <Member Name="bE0026_Reserviert" Datatype="Bool" />
+      <Member Name="bE0027_PSaugOverrange" Datatype="Bool" />
+      <Member Name="bE0028_PPsZuTief" Datatype="Bool" />
+      <Member Name="bE0029_Oelpumpe" Datatype="Bool" />
+      <Member Name="bE0030_Leistungsschieber" Datatype="Bool" />
+      <Member Name="bE0031_PoPsZuTief" Datatype="Bool" />
+      <Member Name="bE0032_StartdruckZuHoch" Datatype="Bool" />
+      <Member Name="bE0033_POelfilterStillstand" Datatype="Bool" />
+      <Member Name="bE0034_PoPMinFehler" Datatype="Bool" />
+      <Member Name="bE0035_Startoeldruck" Datatype="Bool" />
+      <Member Name="bE0036_TDruckGradient" Datatype="Bool" />
+      <Member Name="bE0037_OelflussVerdichter" Datatype="Bool" />
+      <Member Name="bE0038_KeineGasfoerderung" Datatype="Bool" />
+      <Member Name="bE0039_PZwDruck" Datatype="Bool" />
+      <Member Name="bE0040_TZwDruck" Datatype="Bool" />
+      <Member Name="bE0041_TSHMinZwDruck" Datatype="Bool" />
+      <Member Name="bE0042_POeldiffMax" Datatype="Bool" />
+      <Member Name="bE0043_PPsMax" Datatype="Bool" />
+      <Member Name="bE0044_OelkhlungTop" Datatype="Bool" />
+      <Member Name="bE0045_PPzZuTeif" Datatype="Bool" />
+      <Member Name="bE0046_PPzMax" Datatype="Bool" />
+      <Member Name="bE0047_PPsZuTief" Datatype="Bool" />
+      <Member Name="bE0048_FluessigSchlag" Datatype="Bool" />
+      <Member Name="bE0049_Reserviert" Datatype="Bool" />
+      <Member Name="bE0050_Reserviert" Datatype="Bool" />
+      <Member Name="bE0051_Reserviert" Datatype="Bool" />
+      <Member Name="bE0052_Reserviert" Datatype="Bool" />
+      <Member Name="bE0053_Reserviert" Datatype="Bool" />
+      <Member Name="bE0054_Reserviert" Datatype="Bool" />
+      <Member Name="bE0055_Reserviert" Datatype="Bool" />
+      <Member Name="bE0056_Reserviert" Datatype="Bool" />
+      <Member Name="bE0057_Reserviert" Datatype="Bool" />
+      <Member Name="bE0058_Reserviert" Datatype="Bool" />
+      <Member Name="bE0059_Reserviert" Datatype="Bool" />
+      <Member Name="bE0060_Reserviert" Datatype="Bool" />
+      <Member Name="bE0061_Reserviert" Datatype="Bool" />
+      <Member Name="bE0062_Reserviert" Datatype="Bool" />
+      <Member Name="bE0063_KaeltekreisMasterAusgefa" Datatype="Bool" />
+      <Member Name="bE0064_Reserviert" Datatype="Bool" />
+      <Member Name="bE0065_KaelteKreisInvUngueltig" Datatype="Bool" />
+      <Member Name="bE0066_OelkreisMasterAusgefa" Datatype="Bool" />
+      <Member Name="bE0067_Reserviert" Datatype="Bool" />
+      <Member Name="bE0068_OelKreisInvUngueltig" Datatype="Bool" />
+      <Member Name="bE0069_SchmierdruckMin" Datatype="Bool" />
+      <Member Name="bE0070_PPoMax" Datatype="Bool" />
+      <Member Name="bE0071_Haupt_OeldruckMin" Datatype="Bool" />
+      <Member Name="bE0072_Reserviert" Datatype="Bool" />
+      <Member Name="bE0073_Reserviert" Datatype="Bool" />
+      <Member Name="bE0074_Reserviert" Datatype="Bool" />
+      <Member Name="bE0075_TZylinderkopfFehler" Datatype="Bool" />
+      <Member Name="bE0076_VerdampferpumpeFehlerBet" Datatype="Bool" />
+      <Member Name="bE0077_VerdampferpumpeFehlerSti" Datatype="Bool" />
+      <Member Name="bE0078_NivHDAbschHochFehler" Datatype="Bool" />
+      <Member Name="bE0079_NivEconomiserHochFehler" Datatype="Bool" />
+      <Member Name="bE0080_Reserviert" Datatype="Bool" />
+      <Member Name="bE0081_KonfFehlerKkStart_Stopp" Datatype="Bool" />
+      <Member Name="bE0082_HDVerdAusgefallen" Datatype="Bool" />
+      <Member Name="bE0083_NDVerdAusgefallen" Datatype="Bool" />
+      <Member Name="bE0084_KeinStartbefehlKonf" Datatype="Bool" />
+      <Member Name="bE0085_PzPsMax" Datatype="Bool" />
+      <Member Name="bE0086_Reserviert" Datatype="Bool" />
+      <Member Name="bE0087_VibraSwitchAusg" Datatype="Bool" />
+      <Member Name="bE0088_TOelabschMax" Datatype="Bool" />
+      <Member Name="bE0089_TOelMin" Datatype="Bool" />
+      <Member Name="bE0090_Reserviert" Datatype="Bool" />
+      <Member Name="bE0091_NDAbschNivHoch" Datatype="Bool" />
+      <Member Name="bE0092_Sekundaerschieber" Datatype="Bool" />
+      <Member Name="bE0093_Reserviert" Datatype="Bool" />
+      <Member Name="bE0094_KonfigFehlerAbsKuehls" Datatype="Bool" />
+      <Member Name="bE0095_Reserviert" Datatype="Bool" />
+      <Member Name="bE0096_OelnivKGHhoch" Datatype="Bool" />
+      <Member Name="bE0097_KonfigFehlerDIPrio" Datatype="Bool" />
+      <Member Name="bE0098_Reserviert" Datatype="Bool" />
+      <Member Name="bE0099_Reserviert" Datatype="Bool" />
+      <Member Name="bE0100_Reserviert" Datatype="Bool" />
+      <Member Name="bE0101_KonfigFehlerDrehzahl" Datatype="Bool" />
+      <Member Name="bE0102_Reserviert" Datatype="Bool" />
+      <Member Name="bE0103_PSaugHoch" Datatype="Bool" />
+      <Member Name="bE0104_KonfigFehlerMotorleist" Datatype="Bool" />
+      <Member Name="bE0105_FehlerEinsatzdiagr" Datatype="Bool" />
+      <Member Name="bE0106_Reserviert" Datatype="Bool" />
+      <Member Name="bE0107_Reserviert" Datatype="Bool" />
+      <Member Name="bE0108_Reserviert" Datatype="Bool" />
+      <Member Name="bE0109_MotorfehlerNotAusTest" Datatype="Bool" />
+      <Member Name="bE0110_StirnspHauptrotorZGross" Datatype="Bool" />
+      <Member Name="bE0111_StirnspHautprotorZKlein" Datatype="Bool" />
+      <Member Name="bE0112_StirnspNebenrotorZGross" Datatype="Bool" />
+      <Member Name="bE0113_StirnspNebenrotorZKlein" Datatype="Bool" />
+      <Member Name="bE0114_THauptrotorDS" Datatype="Bool" />
+      <Member Name="bE0115_THauptrotorSS" Datatype="Bool" />
+      <Member Name="bE0116_TNebenrotorDS" Datatype="Bool" />
+      <Member Name="bE0117_TNebenrotorSS" Datatype="Bool" />
+      <Member Name="bE0118_FlSchlagFehlerSensor" Datatype="Bool" />
+      <Member Name="bE0119_OelstoppventilFehler" Datatype="Bool" />
+      <Member Name="bE0120_Reserviert" Datatype="Bool" />
+      <Member Name="bE0121_Reserviert" Datatype="Bool" />
+      <Member Name="bE0122_Reserviert" Datatype="Bool" />
+      <Member Name="bE0123_Reserviert" Datatype="Bool" />
+      <Member Name="bE0124_Reserviert" Datatype="Bool" />
+      <Member Name="bE0125_Reserviert" Datatype="Bool" />
+      <Member Name="bE0126_Reserviert" Datatype="Bool" />
+      <Member Name="bE0127_Reserviert" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarm" Datatype="Struct">
+      <Member Name="bA1000_Reserviert" Datatype="Bool" />
+      <Member Name="bA1001_VerbundMasterAusg" Datatype="Bool" />
+      <Member Name="bA1002_Reserviert" Datatype="Bool" />
+      <Member Name="bA1003_Reserviert" Datatype="Bool" />
+      <Member Name="bA1004_TDruck" Datatype="Bool" />
+      <Member Name="bA1005_PDruck" Datatype="Bool" />
+      <Member Name="bA1006_Reserviert" Datatype="Bool" />
+      <Member Name="bA1007_TMotor" Datatype="Bool" />
+      <Member Name="bA1008_TSHMinSaug" Datatype="Bool" />
+      <Member Name="bA1009_TSHMinDruck" Datatype="Bool" />
+      <Member Name="bA1010_Reserviert" Datatype="Bool" />
+      <Member Name="bA1011_Reserviert" Datatype="Bool" />
+      <Member Name="bA1012_Reserviert" Datatype="Bool" />
+      <Member Name="bA1013_Reserviert" Datatype="Bool" />
+      <Member Name="bA1014_Reserviert" Datatype="Bool" />
+      <Member Name="bA1015_Reserviert" Datatype="Bool" />
+      <Member Name="bA1016_POeldiff_Betrieb" Datatype="Bool" />
+      <Member Name="bA1017_TOelmax" Datatype="Bool" />
+      <Member Name="bA1018_OelniveauOA" Datatype="Bool" />
+      <Member Name="bA1019_Reserviert" Datatype="Bool" />
+      <Member Name="bA1020_Reserviert" Datatype="Bool" />
+      <Member Name="bA1021_POelfilterBetrieb" Datatype="Bool" />
+      <Member Name="bA1022_TLagerDE" Datatype="Bool" />
+      <Member Name="bA1023_TLagerNDE" Datatype="Bool" />
+      <Member Name="bA1024_OelniveauOA_hoch" Datatype="Bool" />
+      <Member Name="bA1025_Reserviert" Datatype="Bool" />
+      <Member Name="bA1026_Reserviert" Datatype="Bool" />
+      <Member Name="bA1027_PSaugOverrange" Datatype="Bool" />
+      <Member Name="bA1028_PPszutief" Datatype="Bool" />
+      <Member Name="bA1029_Reserviert" Datatype="Bool" />
+      <Member Name="bA1030_Reserviert" Datatype="Bool" />
+      <Member Name="bA1031_Reserviert" Datatype="Bool" />
+      <Member Name="bA1032_Reserviert" Datatype="Bool" />
+      <Member Name="bA1033_Reserviert" Datatype="Bool" />
+      <Member Name="bA1034_PoPMin" Datatype="Bool" />
+      <Member Name="bA1035_Reserviert" Datatype="Bool" />
+      <Member Name="bA1036_Reserviert" Datatype="Bool" />
+      <Member Name="bA1037_Reserviert" Datatype="Bool" />
+      <Member Name="bA1038_Reserviert" Datatype="Bool" />
+      <Member Name="bA1039_PZwDruck" Datatype="Bool" />
+      <Member Name="bA1040_TZwDruck" Datatype="Bool" />
+      <Member Name="bA1041_TSHminZwDruck" Datatype="Bool" />
+      <Member Name="bA1042_Reserviert" Datatype="Bool" />
+      <Member Name="bA1043_PPsmax" Datatype="Bool" />
+      <Member Name="bA1044_Reserviert" Datatype="Bool" />
+      <Member Name="bA1045_PPzzutief" Datatype="Bool" />
+      <Member Name="bA1046_PPzmax" Datatype="Bool" />
+      <Member Name="bA1047_PPszutief2" Datatype="Bool" />
+      <Member Name="bA1048_FluessigSchlag" Datatype="Bool" />
+      <Member Name="bA1049_NDPendel" Datatype="Bool" />
+      <Member Name="bA1050_TOelMin" Datatype="Bool" />
+      <Member Name="bA1051_Reserviert" Datatype="Bool" />
+      <Member Name="bA1052_OelheizungOA" Datatype="Bool" />
+      <Member Name="bA1053_TSaug" Datatype="Bool" />
+      <Member Name="bA1054_PSauglimit" Datatype="Bool" />
+      <Member Name="bA1055_PDrucklimit" Datatype="Bool" />
+      <Member Name="bA1056_LastabwurfMotorstrom" Datatype="Bool" />
+      <Member Name="bA1057_MinLeistungnErr" Datatype="Bool" />
+      <Member Name="bA1058_MaxLeistungnErr" Datatype="Bool" />
+      <Member Name="bA1059_BalanceFNorm" Datatype="Bool" />
+      <Member Name="bA1060_PrimaerschMaxNErr" Datatype="Bool" />
+      <Member Name="bA1061_LastabwurfMotorleistung" Datatype="Bool" />
+      <Member Name="bA1062_OelheizungKGH" Datatype="Bool" />
+      <Member Name="bA1063_KaeltekreisMasterAusgef" Datatype="Bool" />
+      <Member Name="bA1064_KaeltekreisSlaveAusgef" Datatype="Bool" />
+      <Member Name="bA1065_Reserviert" Datatype="Bool" />
+      <Member Name="bA1066_Reserviert" Datatype="Bool" />
+      <Member Name="bA1067_OelkreisSlaveAusgef" Datatype="Bool" />
+      <Member Name="bA1068_Reserviert" Datatype="Bool" />
+      <Member Name="bA1069_SchmierdruckMin" Datatype="Bool" />
+      <Member Name="bA1070_PPoMax" Datatype="Bool" />
+      <Member Name="bA1071_HauptOeldruckMin" Datatype="Bool" />
+      <Member Name="bA1072_Oelnachspeisung" Datatype="Bool" />
+      <Member Name="bA1073_KdMasterAusgef" Datatype="Bool" />
+      <Member Name="bA1074_VrMasterAusgef" Datatype="Bool" />
+      <Member Name="bA1075_TZylinderkopf" Datatype="Bool" />
+      <Member Name="bA1076_Reserviert" Datatype="Bool" />
+      <Member Name="bA1077_Reserviert" Datatype="Bool" />
+      <Member Name="bA1078_Reserviert" Datatype="Bool" />
+      <Member Name="bA1079_Reserviert" Datatype="Bool" />
+      <Member Name="bA1080_KdMasterAusef" Datatype="Bool" />
+      <Member Name="bA1081_Reserviert" Datatype="Bool" />
+      <Member Name="bA1082_Reserviert" Datatype="Bool" />
+      <Member Name="bA1083_Reserviert" Datatype="Bool" />
+      <Member Name="bA1084_Reserviert" Datatype="Bool" />
+      <Member Name="bA1085_PzPsAlarm" Datatype="Bool" />
+      <Member Name="bA1086_HauptMasterAusgef" Datatype="Bool" />
+      <Member Name="bA1087_Reserviert" Datatype="Bool" />
+      <Member Name="bA1088_TOelabschMaxAlarm" Datatype="Bool" />
+      <Member Name="bA1089_TOelMinAlarm" Datatype="Bool" />
+      <Member Name="bA1090_OelpumpePendelalarm" Datatype="Bool" />
+      <Member Name="bA1091_Reserviert" Datatype="Bool" />
+      <Member Name="bA1092_Reserviert" Datatype="Bool" />
+      <Member Name="bA1093_TOelMinAlarmKGH" Datatype="Bool" />
+      <Member Name="bA1094_Reserviert" Datatype="Bool" />
+      <Member Name="bA1095_TZwDruckSaugHDAlarm" Datatype="Bool" />
+      <Member Name="bA1096_OelniveauKGHHoch" Datatype="Bool" />
+      <Member Name="bA1097_Reserviert" Datatype="Bool" />
+      <Member Name="bA1098_MKaeltekrMasterAktiv" Datatype="Bool" />
+      <Member Name="bA1099_MOelkreisMasterAktiv" Datatype="Bool" />
+      <Member Name="bA1100_Objekt-ID mehrfach vorhanden" Datatype="Bool" />
+      <Member Name="bA1101_Reserviert" Datatype="Bool" />
+      <Member Name="bA1102_RekalibrierungMinNDurchg" Datatype="Bool" />
+      <Member Name="bA1103_Reserviert" Datatype="Bool" />
+      <Member Name="bA1104_Reserviert" Datatype="Bool" />
+      <Member Name="bA1105_AlarmEinsatzdiagr" Datatype="Bool" />
+      <Member Name="bA1106_AlarmEcoNivEndsch" Datatype="Bool" />
+      <Member Name="bA1107_OelnachspDVrGesp" Datatype="Bool" />
+      <Member Name="bA1108_OerektDVrGesp" Datatype="Bool" />
+      <Member Name="bA1109_NotAusTestFehlgeschl" Datatype="Bool" />
+      <Member Name="bA1110_StirnspHauptrotorZGross" Datatype="Bool" />
+      <Member Name="bA1111_StirnspHauptrotorZKlein" Datatype="Bool" />
+      <Member Name="bA1112_StirnspNebenrotorZGross" Datatype="Bool" />
+      <Member Name="bA1113_StirnspNebenrotorZKlein" Datatype="Bool" />
+      <Member Name="bA1114_THauptrotorDS" Datatype="Bool" />
+      <Member Name="bA1115_THauptrotorSS" Datatype="Bool" />
+      <Member Name="bA1116_TNebenrotorDS" Datatype="Bool" />
+      <Member Name="bA1117_TNebenrotorSS" Datatype="Bool" />
+      <Member Name="bA1118_FlSchlagAlarmSensor" Datatype="Bool" />
+      <Member Name="bA1119_Reserviert" Datatype="Bool" />
+      <Member Name="bA1120_PDruckMinAlarm" Datatype="Bool" />
+      <Member Name="bA1121_Vorschm10Tagen" Datatype="Bool" />
+      <Member Name="bA1122_Vorschm9Tagen" Datatype="Bool" />
+      <Member Name="bA1123_Vorschm8Tagen" Datatype="Bool" />
+      <Member Name="bA1124_Vorschm7Tagen" Datatype="Bool" />
+      <Member Name="bA1125_Vorschm6Tagen" Datatype="Bool" />
+      <Member Name="bA1126_Vorschm5Tagen" Datatype="Bool" />
+      <Member Name="bA1127_Vorschm4Tagen" Datatype="Bool" />
+    </Member>
+    <Member Name="Zustand" Datatype="Struct">
+      <Member Name="bFehlerzustandAktiv" Datatype="Bool" />
+      <Member Name="bAlarmzustandAktiv" Datatype="Bool" />
+      <Member Name="bSystemMeldungAktiv" Datatype="Bool" />
+      <Member Name="bServiceMeldungAktiv" Datatype="Bool" />
+      <Member Name="bStopManuell" Datatype="Bool" />
+      <Member Name="bStopAuto" Datatype="Bool" />
+      <Member Name="bStopExtern" Datatype="Bool" />
+      <Member Name="bBetriebAuto" Datatype="Bool" />
+      <Member Name="bBetriebManuell" Datatype="Bool" />
+      <Member Name="bAnlaufAuto" Datatype="Bool" />
+      <Member Name="bAnlaufManuell" Datatype="Bool" />
+      <Member Name="bManuellStoppen" Datatype="Bool" />
+      <Member Name="b354_Reserve" Datatype="Bool" />
+      <Member Name="b355_Reserve" Datatype="Bool" />
+      <Member Name="b356_Reserve" Datatype="Bool" />
+      <Member Name="b357_Reserve" Datatype="Bool" />
+      <Member Name="by36_Reserve" Datatype="Byte" />
+      <Member Name="bAnlaufsperre" Datatype="Bool" />
+      <Member Name="bVerdichterSaugtAb" Datatype="Bool" />
+      <Member Name="bLastabwurfSaugseite" Datatype="Bool" />
+      <Member Name="bLastabwurfDruckseite" Datatype="Bool" />
+      <Member Name="bLastabwurfPPs" Datatype="Bool" />
+      <Member Name="bElStromGrNormal" Datatype="Bool" />
+      <Member Name="bElStromGrMaximum" Datatype="Bool" />
+      <Member Name="bOelZuKalt" Datatype="Bool" />
+      <Member Name="bNiveauOelabschZuTief" Datatype="Bool" />
+      <Member Name="bExternsperreAktiv" Datatype="Bool" />
+      <Member Name="bEnergiesperreAktiv" Datatype="Bool" />
+      <Member Name="bFreigabeWeitVdFehlt" Datatype="Bool" />
+      <Member Name="bExternLimitAktiv" Datatype="Bool" />
+      <Member Name="bInternLimitAktiv" Datatype="Bool" />
+      <Member Name="bVerdichterVollOel" Datatype="Bool" />
+      <Member Name="bOelabscheiderProblem" Datatype="Bool" />
+      <Member Name="bBegrenzungElStromAktiv" Datatype="Bool" />
+      <Member Name="bSealLube" Datatype="Bool" />
+      <Member Name="bKeineFrgZwischendruck" Datatype="Bool" />
+      <Member Name="bElLeistungGrNormal" Datatype="Bool" />
+      <Member Name="bElLeistungGrMaximum" Datatype="Bool" />
+      <Member Name="bBegrElLeistungAkt" Datatype="Bool" />
+      <Member Name="bStartbefehlManuell" Datatype="Bool" />
+      <Member Name="bOelpumpeManuell" Datatype="Bool" />
+      <Member Name="bOelrektifizierungMan" Datatype="Bool" />
+      <Member Name="bOelkuehlerManuell" Datatype="Bool" />
+      <Member Name="bInventarKaeltekreis" Datatype="Bool" />
+      <Member Name="bInventarOelkreis" Datatype="Bool" />
+      <Member Name="bMasterGesperrt" Datatype="Bool" />
+      <Member Name="bKaeltekrStbyMstInit" Datatype="Bool" />
+      <Member Name="bKaeltekrStbyMstPassiv" Datatype="Bool" />
+      <Member Name="bKaeltekrStbyMstAktiv" Datatype="Bool" />
+      <Member Name="bHaltManuell" Datatype="Bool" />
+      <Member Name="bGespVomKd" Datatype="Bool" />
+      <Member Name="bGespVomVr" Datatype="Bool" />
+      <Member Name="bOelZuWarm" Datatype="Bool" />
+      <Member Name="bNachkalMin" Datatype="Bool" />
+      <Member Name="bPDruckZuHoch" Datatype="Bool" />
+      <Member Name="bVdStartVerz" Datatype="Bool" />
+      <Member Name="bSchieberZwangstr" Datatype="Bool" />
+      <Member Name="bGespVonOelkreisMaster" Datatype="Bool" />
+      <Member Name="b421_Reserve" Datatype="Bool" />
+      <Member Name="b422_Reserve" Datatype="Bool" />
+      <Member Name="b423_Reserve" Datatype="Bool" />
+      <Member Name="b424_Reserve" Datatype="Bool" />
+      <Member Name="b425_Reserve" Datatype="Bool" />
+      <Member Name="b426_Reserve" Datatype="Bool" />
+      <Member Name="b427_Reserve" Datatype="Bool" />
+      <Member Name="by43_Reserve" Datatype="Byte" />
+      <Member Name="by44_Reserve" Datatype="Byte" />
+      <Member Name="by45_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigIn" Datatype="Struct">
+      <Member Name="bNotstopp" Datatype="Bool" />
+      <Member Name="bFehlerExtern" Datatype="Bool" />
+      <Member Name="bPhasenuberwachung" Datatype="Bool" />
+      <Member Name="bNiveauOelabscheiderTief" Datatype="Bool" />
+      <Member Name="bNiveauOelabscheiderHoch" Datatype="Bool" />
+      <Member Name="bNiveauKurbelgehaeuseTief" Datatype="Bool" />
+      <Member Name="bNiveauOelabscheiderRueckf" Datatype="Bool" />
+      <Member Name="bStartbefehl" Datatype="Bool" />
+      <Member Name="bRmVerdichtermotor" Datatype="Bool" />
+      <Member Name="bRmElOelpumpe" Datatype="Bool" />
+      <Member Name="bExternLeistungslimit" Datatype="Bool" />
+      <Member Name="bStartprioritaet" Datatype="Bool" />
+      <Member Name="bRmChillerpumpe" Datatype="Bool" />
+      <Member Name="bSpitzenlastsperre" Datatype="Bool" />
+      <Member Name="bMotorbegrenzung" Datatype="Bool" />
+      <Member Name="bPDruckseiteDigital" Datatype="Bool" />
+      <Member Name="bPSaugseiteDigital" Datatype="Bool" />
+      <Member Name="bPOelLubeDigital" Datatype="Bool" />
+      <Member Name="bPOelfilterDigital" Datatype="Bool" />
+      <Member Name="bTDruckseiteDigital" Datatype="Bool" />
+      <Member Name="bTSaugseiteDigital" Datatype="Bool" />
+      <Member Name="bTOelDigital" Datatype="Bool" />
+      <Member Name="bTOelabscheiderDigital" Datatype="Bool" />
+      <Member Name="bTMotorDigital" Datatype="Bool" />
+      <Member Name="bNivKurbelGehaeuseHoch" Datatype="Bool" />
+      <Member Name="bRueckmeldungLuefter" Datatype="Bool" />
+      <Member Name="bRueckmeldungStoerung" Datatype="Bool" />
+      <Member Name="bNivNDAbschHoch" Datatype="Bool" />
+      <Member Name="bNivEconomiserHoch" Datatype="Bool" />
+      <Member Name="bLastsperre" Datatype="Bool" />
+      <Member Name="b496_Reserviert" Datatype="Bool" />
+      <Member Name="bOelstrBitzer" Datatype="Bool" />
+      <Member Name="bOelflussYork" Datatype="Bool" />
+      <Member Name="bOelabschNivNormal" Datatype="Bool" />
+      <Member Name="bAuxDigital1" Datatype="Bool" />
+      <Member Name="bAuxDigital2" Datatype="Bool" />
+      <Member Name="bVerdichterOelniveau" Datatype="Bool" />
+      <Member Name="bVibraSwitch" Datatype="Bool" />
+      <Member Name="bNDAbschNiveauHochMax" Datatype="Bool" />
+      <Member Name="bStartzwangExtern" Datatype="Bool" />
+      <Member Name="bOelnivKurbelGehaeuseNorm" Datatype="Bool" />
+      <Member Name="bExternsperre" Datatype="Bool" />
+      <Member Name="bDrehmomentbegrenzung" Datatype="Bool" />
+      <Member Name="bNiveauEconomOpen" Datatype="Bool" />
+      <Member Name="bNiveauEconomClose" Datatype="Bool" />
+      <Member Name="bOelstoppventilBitzer" Datatype="Bool" />
+      <Member Name="bFreigabePDruckLimit" Datatype="Bool" />
+      <Member Name="bFreigabePSaugLimit" Datatype="Bool" />
+      <Member Name="bFreigabeHaltebetrieb" Datatype="Bool" />
+      <Member Name="b521_Reserve" Datatype="Bool" />
+      <Member Name="b522_Reserve" Datatype="Bool" />
+      <Member Name="b523_Reserve" Datatype="Bool" />
+      <Member Name="b524_Reserve" Datatype="Bool" />
+      <Member Name="b525_Reserve" Datatype="Bool" />
+      <Member Name="b526_Reserve" Datatype="Bool" />
+      <Member Name="b527_Reserve" Datatype="Bool" />
+      <Member Name="by53_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigOut" Datatype="Struct">
+      <Member Name="bFehler" Datatype="Bool" />
+      <Member Name="bAlarm" Datatype="Bool" />
+      <Member Name="bLastschalterAusloesung" Datatype="Bool" />
+      <Member Name="bBereit" Datatype="Bool" />
+      <Member Name="bStart_Motor" Datatype="Bool" />
+      <Member Name="bAnlaufentlastung" Datatype="Bool" />
+      <Member Name="bTeilwicklung2" Datatype="Bool" />
+      <Member Name="bMagnetventilFluessig" Datatype="Bool" />
+      <Member Name="bOelheizungOelabscheider" Datatype="Bool" />
+      <Member Name="bOelheizungKurbelgehaeuse" Datatype="Bool" />
+      <Member Name="bStartOelpumpe" Datatype="Bool" />
+      <Member Name="bOelventil" Datatype="Bool" />
+      <Member Name="bOelrektifizierungA" Datatype="Bool" />
+      <Member Name="bOelrektifizierungB" Datatype="Bool" />
+      <Member Name="bOelrueckfuehrung" Datatype="Bool" />
+      <Member Name="bOelnachspeisung" Datatype="Bool" />
+      <Member Name="bOelkuehlung" Datatype="Bool" />
+      <Member Name="bPowerkit" Datatype="Bool" />
+      <Member Name="bEconomiser" Datatype="Bool" />
+      <Member Name="bLeistungGrGrenzwert" Datatype="Bool" />
+      <Member Name="bZwischendruckkuehlung" Datatype="Bool" />
+      <Member Name="bVerdapferpumpe" Datatype="Bool" />
+      <Member Name="bStartanzeige" Datatype="Bool" />
+      <Member Name="bGrundlastzylinder" Datatype="Bool" />
+      <Member Name="bViMax" Datatype="Bool" />
+      <Member Name="bViMin" Datatype="Bool" />
+      <Member Name="bVi22" Datatype="Bool" />
+      <Member Name="bVi2235" Datatype="Bool" />
+      <Member Name="bUeberhitzungsventil" Datatype="Bool" />
+      <Member Name="bStillstandentlastung" Datatype="Bool" />
+      <Member Name="bOeltransfer" Datatype="Bool" />
+      <Member Name="bFastPullDownMV" Datatype="Bool" />
+      <Member Name="bNiveaureglerEconom" Datatype="Bool" />
+      <Member Name="bOelrektEinzeln" Datatype="Bool" />
+      <Member Name="bSaugleitungsheizung" Datatype="Bool" />
+      <Member Name="bLeistungsschPulsBitzer" Datatype="Bool" />
+      <Member Name="bAnzSchmierungNStillstand" Datatype="Bool" />
+      <Member Name="bTOPHeizung" Datatype="Bool" />
+      <Member Name="bTOPMVKuehlen" Datatype="Bool" />
+      <Member Name="b587_Reserve" Datatype="Bool" />
+      <Member Name="by59_Reserve" Datatype="Byte" />
+      <Member Name="by60_Reserve" Datatype="Byte" />
+      <Member Name="by61_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="rPDruckBar" Datatype="Real" />
+    <Member Name="rPDruckGrad" Datatype="Real" />
+    <Member Name="rPSaugBar" Datatype="Real" />
+    <Member Name="rPSaugGrad" Datatype="Real" />
+    <Member Name="rIstleistProz" Datatype="Real" />
+    <Member Name="rIstleistVol" Datatype="Real" />
+    <Member Name="rSollleistProz" Datatype="Real" />
+    <Member Name="rSollleistVol" Datatype="Real" />
+    <Member Name="rIstVi" Datatype="Real" />
+    <Member Name="rSollVi" Datatype="Real" />
+    <Member Name="rPZwStufeBar" Datatype="Real" />
+    <Member Name="rPZwStufeGrad" Datatype="Real" />
+    <Member Name="rPEcoBar" Datatype="Real" />
+    <Member Name="rPEcoGrad" Datatype="Real" />
+    <Member Name="rPOelLube" Datatype="Real" />
+    <Member Name="rPOelDiff" Datatype="Real" />
+    <Member Name="rPOelfilter" Datatype="Real" />
+    <Member Name="rPOelpumpe" Datatype="Real" />
+    <Member Name="rPKGH" Datatype="Real" />
+    <Member Name="rTDruck" Datatype="Real" />
+    <Member Name="rTSaug" Datatype="Real" />
+    <Member Name="rTZwStufe" Datatype="Real" />
+    <Member Name="rTOel" Datatype="Real" />
+    <Member Name="rTOelabscheider" Datatype="Real" />
+    <Member Name="rTSHDruck" Datatype="Real" />
+    <Member Name="rTSHSaug" Datatype="Real" />
+    <Member Name="rTSHZwStufe" Datatype="Real" />
+    <Member Name="rMotorstromA" Datatype="Real" />
+    <Member Name="rMotorstromProz" Datatype="Real" />
+    <Member Name="rMotorleistkW" Datatype="Real" />
+    <Member Name="rMotorleistProz" Datatype="Real" />
+    <Member Name="rMotorPTC" Datatype="Real" />
+    <Member Name="diEinschaltMotor" Datatype="DInt" />
+    <Member Name="diBetriebsstunden" Datatype="DInt" />
+    <Member Name="iAktVdStufe" Datatype="Int" />
+    <Member Name="rOelkRegIst" Datatype="Real" />
+    <Member Name="rOelkRegSoll" Datatype="Real" />
+    <Member Name="rOelkRegOut" Datatype="Real" />
+    <Member Name="rMotordrehzahl" Datatype="Real" />
+    <Member Name="diEnergiezaehlerTot" Datatype="DInt" />
+    <Member Name="rOaNiveau" Datatype="Real" />
+    <Member Name="rAuxAnalog1" Datatype="Real" />
+    <Member Name="rMinLeistung" Datatype="Real" />
+    <Member Name="rMaxLeistung" Datatype="Real" />
+    <Member Name="rPOelfilterEinAus" Datatype="Real" />
+    <Member Name="rTOelkuehlerEin" Datatype="Real" />
+    <Member Name="rTOelkuehlerAus" Datatype="Real" />
+    <Member Name="rPosPriSchieber" Datatype="Real" />
+    <Member Name="rPosSekSchieber" Datatype="Real" />
+    <Member Name="rTSaugleitung" Datatype="Real" />
+    <Member Name="rReserveReal" Datatype="Array[0..14] of Real" />
+  </Section>
+</Sections></Interface>
+      <Name>WT2_Vd_Status_1_UDT</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

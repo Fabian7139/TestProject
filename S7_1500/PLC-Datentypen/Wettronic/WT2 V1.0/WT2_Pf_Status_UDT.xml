@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="iHandshake" Datatype="Int" />
+    <Member Name="Datum" Datatype="Array[0..9] of Char" />
+    <Member Name="Zeit" Datatype="Array[0..7] of Char" />
+    <Member Name="SwVersion" Datatype="Array[0..7] of Char" />
+    <Member Name="Fehler" Datatype="Struct">
+      <Member Name="bE0000_KonfigFehler" Datatype="Bool" />
+      <Member Name="bE0001_IOZuweisungUnvollst" Datatype="Bool" />
+      <Member Name="bE0002_Reserviert" Datatype="Bool" />
+      <Member Name="bE0003_Reserviert" Datatype="Bool" />
+      <Member Name="bE0004_FehlerIOKomm" Datatype="Bool" />
+      <Member Name="bE0005_FehlerKabelbruch" Datatype="Bool" />
+      <Member Name="bE0006_FehlerIOHWKonfig" Datatype="Bool" />
+      <Member Name="bE0007_Reserviert" Datatype="Bool" />
+      <Member Name="bE0008_Reserviert" Datatype="Bool" />
+      <Member Name="bE0009_Reserviert" Datatype="Bool" />
+      <Member Name="bE0010_Reserviert" Datatype="Bool" />
+      <Member Name="bE0011_Reserviert" Datatype="Bool" />
+      <Member Name="bE0012_Reserviert" Datatype="Bool" />
+      <Member Name="bE0013_Reserviert" Datatype="Bool" />
+      <Member Name="bE0014_Reserviert" Datatype="Bool" />
+      <Member Name="bE0015_Reserviert" Datatype="Bool" />
+      <Member Name="bE0016_Reserviert" Datatype="Bool" />
+      <Member Name="b301_Reserve" Datatype="Bool" />
+      <Member Name="b302_Reserve" Datatype="Bool" />
+      <Member Name="b303_Reserve" Datatype="Bool" />
+      <Member Name="b304_Reserve" Datatype="Bool" />
+      <Member Name="b305_Reserve" Datatype="Bool" />
+      <Member Name="b306_Reserve" Datatype="Bool" />
+      <Member Name="b307_Reserve" Datatype="Bool" />
+      <Member Name="by31_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Alarm" Datatype="Struct">
+      <Member Name="bA1000_Reserviert" Datatype="Bool" />
+      <Member Name="bA1001_Reserviert" Datatype="Bool" />
+      <Member Name="bA1002_Reserviert" Datatype="Bool" />
+      <Member Name="bA1003_Reserviert" Datatype="Bool" />
+      <Member Name="bA1004_Reserviert" Datatype="Bool" />
+      <Member Name="bA1005_AlarmKabelbruch" Datatype="Bool" />
+      <Member Name="bA1006_Reserviert" Datatype="Bool" />
+      <Member Name="bA1007_AlarmFeldbus" Datatype="Bool" />
+      <Member Name="bA1008_ZugriffsfehlerCFKarte" Datatype="Bool" />
+      <Member Name="bA1009_MZeitMasterAktiv" Datatype="Bool" />
+      <Member Name="bA1010_FehlerInitSteuerkomm" Datatype="Bool" />
+      <Member Name="bA1011_AlarmFBStandbyMasterAktiv" Datatype="Bool" />
+      <Member Name="bA1012_Reserviert" Datatype="Bool" />
+      <Member Name="bA1013_AlarmFehlerIOModul" Datatype="Bool" />
+      <Member Name="bA1014_AlarmFehlerIOModulAnz" Datatype="Bool" />
+      <Member Name="bA1015_AlarmCPUTempZuHoch" Datatype="Bool" />
+      <Member Name="bA1016_AlarmCPUAuslZuHoch" Datatype="Bool" />
+      <Member Name="b341_Reserve" Datatype="Bool" />
+      <Member Name="b342_Reserve" Datatype="Bool" />
+      <Member Name="b343_Reserve" Datatype="Bool" />
+      <Member Name="b344_Reserve" Datatype="Bool" />
+      <Member Name="b345_Reserve" Datatype="Bool" />
+      <Member Name="b346_Reserve" Datatype="Bool" />
+      <Member Name="b347_Reserve" Datatype="Bool" />
+      <Member Name="by35_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Zustand" Datatype="Struct">
+      <Member Name="bFehlerzustandAktiv" Datatype="Bool" />
+      <Member Name="bAlarmzustandAktiv" Datatype="Bool" />
+      <Member Name="bSystemMeldungAktiv" Datatype="Bool" />
+      <Member Name="bSeviceMeldungAktiv" Datatype="Bool" />
+      <Member Name="bStopManuell" Datatype="Bool" />
+      <Member Name="bStopAuto" Datatype="Bool" />
+      <Member Name="bStopExtern" Datatype="Bool" />
+      <Member Name="bBetriebAuto" Datatype="Bool" />
+      <Member Name="bBetriebManuell" Datatype="Bool" />
+      <Member Name="bAnlaufAuto" Datatype="Bool" />
+      <Member Name="bAnlaufManuell" Datatype="Bool" />
+      <Member Name="bManuellStoppen" Datatype="Bool" />
+      <Member Name="b374_Reserve" Datatype="Bool" />
+      <Member Name="b375_Reserve" Datatype="Bool" />
+      <Member Name="b376_Reserve" Datatype="Bool" />
+      <Member Name="b377_Reserve" Datatype="Bool" />
+      <Member Name="by38_Reserve" Datatype="Byte" />
+      <Member Name="bSystemMeldungKonfigUmschaltung" Datatype="Bool" />
+      <Member Name="b391_Reserve" Datatype="Bool" />
+      <Member Name="b392_Reserve" Datatype="Bool" />
+      <Member Name="b393_Reserve" Datatype="Bool" />
+      <Member Name="b394_Reserve" Datatype="Bool" />
+      <Member Name="b395_Reserve" Datatype="Bool" />
+      <Member Name="b396_Reserve" Datatype="Bool" />
+      <Member Name="b397_Reserve" Datatype="Bool" />
+      <Member Name="by40_Reserve" Datatype="Byte" />
+      <Member Name="by41_Reserve" Datatype="Byte" />
+      <Member Name="by42_Reserve" Datatype="Byte" />
+      <Member Name="by43_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigIn" Datatype="Struct">
+      <Member Name="bKonfigSatzBit0" Datatype="Bool" />
+      <Member Name="bKonfigSatzBit1" Datatype="Bool" />
+      <Member Name="bFreigabeTempRegler" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktRegler1" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktRegler2" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktregler3" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktregler4" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler1" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler2" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler3" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler4" Datatype="Bool" />
+      <Member Name="b453_Reserve" Datatype="Bool" />
+      <Member Name="b454_Reserve" Datatype="Bool" />
+      <Member Name="b455_Reserve" Datatype="Bool" />
+      <Member Name="b456_Reserve" Datatype="Bool" />
+      <Member Name="b457_Reserve" Datatype="Bool" />
+      <Member Name="by46_Reserve" Datatype="Byte" />
+      <Member Name="by47_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigOut" Datatype="Struct">
+      <Member Name="bFehler" Datatype="Bool" />
+      <Member Name="bAlarm" Datatype="Bool" />
+      <Member Name="bTemperaturregler" Datatype="Bool" />
+      <Member Name="bZweipunktrelger1" Datatype="Bool" />
+      <Member Name="bZweipunktrelger2" Datatype="Bool" />
+      <Member Name="bZweipunktregler3" Datatype="Bool" />
+      <Member Name="bZweipunktregler4" Datatype="Bool" />
+      <Member Name="b487_Reserve" Datatype="Bool" />
+      <Member Name="by49_Reserve" Datatype="Byte" />
+      <Member Name="by50_Reserve" Datatype="Byte" />
+      <Member Name="by51_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="iKonfigSatz" Datatype="Int" />
+    <Member Name="rReserveReal" Datatype="Array[0..9] of Real" />
+    <Member Name="byReserveByte" Datatype="Array[0..1] of Byte" />
+  </Section>
+</Sections></Interface>
+      <Name>WT2_Pf_Status_UDT</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

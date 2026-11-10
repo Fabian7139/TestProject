@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="iHandshake" Datatype="Int" />
+    <Member Name="Datum" Datatype="Array[0..9] of Char" />
+    <Member Name="Zeit" Datatype="Array[0..7] of Char" />
+    <Member Name="SwVersion" Datatype="Array[0..7] of Char" />
+    <Member Name="Alarm" Datatype="Struct">
+      <Member Name="bE0000_KonfigAlarm" Datatype="Bool" />
+      <Member Name="bE0001_IOZuweisungUnvollst" Datatype="Bool" />
+      <Member Name="bE0002_Reserviert" Datatype="Bool" />
+      <Member Name="bE0003_Reserviert" Datatype="Bool" />
+      <Member Name="bE0004_AlarmIOKomm" Datatype="Bool" />
+      <Member Name="bE0005_AlarmKabelbruch" Datatype="Bool" />
+      <Member Name="bE0006_AlarmIOHWKonfig" Datatype="Bool" />
+      <Member Name="bE0007_Reserviert" Datatype="Bool" />
+      <Member Name="bE0008_Reserviert" Datatype="Bool" />
+      <Member Name="bE0009_Reserviert" Datatype="Bool" />
+      <Member Name="bE0010_Reserviert" Datatype="Bool" />
+      <Member Name="bE0011_Reserviert" Datatype="Bool" />
+      <Member Name="bE0012_Reserviert" Datatype="Bool" />
+      <Member Name="bE0013_Reserviert" Datatype="Bool" />
+      <Member Name="bE0014_Reserviert" Datatype="Bool" />
+      <Member Name="bE0015_Reserviert" Datatype="Bool" />
+      <Member Name="bE0016_Reserviert" Datatype="Bool" />
+      <Member Name="bE0017_AlarmKeineLizenzVorhanden" Datatype="Bool" />
+      <Member Name="b302_Reserve" Datatype="Bool" />
+      <Member Name="b303_Reserve" Datatype="Bool" />
+      <Member Name="b304_Reserve" Datatype="Bool" />
+      <Member Name="b305_Reserve" Datatype="Bool" />
+      <Member Name="b306_Reserve" Datatype="Bool" />
+      <Member Name="b307_Reserve" Datatype="Bool" />
+      <Member Name="by31_Reserve" Datatype="Byte" />
+      <Member Name="by32_Reserve" Datatype="Byte" />
+      <Member Name="by33_Reserve" Datatype="Byte" />
+      <Member Name="by34_Reserve" Datatype="Byte" />
+      <Member Name="by35_Reserve" Datatype="Byte" />
+      <Member Name="by36_Reserve" Datatype="Byte" />
+      <Member Name="by37_Reserve" Datatype="Byte" />
+      <Member Name="by38_Reserve" Datatype="Byte" />
+      <Member Name="by39_Reserve" Datatype="Byte" />
+      <Member Name="by40_Reserve" Datatype="Byte" />
+      <Member Name="by41_Reserve" Datatype="Byte" />
+      <Member Name="by42_Reserve" Datatype="Byte" />
+      <Member Name="by43_Reserve" Datatype="Byte" />
+      <Member Name="by44_Reserve" Datatype="Byte" />
+      <Member Name="by45_Reserve" Datatype="Byte" />
+      <Member Name="by46_Reserve" Datatype="Byte" />
+      <Member Name="by47_Reserve" Datatype="Byte" />
+      <Member Name="by48_Reserve" Datatype="Byte" />
+      <Member Name="by49_Reserve" Datatype="Byte" />
+      <Member Name="by50_Reserve" Datatype="Byte" />
+      <Member Name="by51_Reserve" Datatype="Byte" />
+      <Member Name="by52_Reserve" Datatype="Byte" />
+      <Member Name="by53_Reserve" Datatype="Byte" />
+      <Member Name="by54_Reserve" Datatype="Byte" />
+      <Member Name="by55_Reserve" Datatype="Byte" />
+      <Member Name="by56_Reserve" Datatype="Byte" />
+      <Member Name="by57_Reserve" Datatype="Byte" />
+      <Member Name="by58_Reserve" Datatype="Byte" />
+      <Member Name="by59_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Warnung" Datatype="Struct">
+      <Member Name="bA1000_Reserviert" Datatype="Bool" />
+      <Member Name="bA1001_Reserviert" Datatype="Bool" />
+      <Member Name="bA1002_Reserviert" Datatype="Bool" />
+      <Member Name="bA1003_Reserviert" Datatype="Bool" />
+      <Member Name="bA1004_Reserviert" Datatype="Bool" />
+      <Member Name="bA1005_WarnungKabelbruch" Datatype="Bool" />
+      <Member Name="bA1006_Reserviert" Datatype="Bool" />
+      <Member Name="bA1007_WarnungFeldbus" Datatype="Bool" />
+      <Member Name="bA1008_Reserviert" Datatype="Bool" />
+      <Member Name="bA1009_Reserviert" Datatype="Bool" />
+      <Member Name="bA1010_WarnungbeiInitialisierungSteuerkommunikation" Datatype="Bool" />
+      <Member Name="bA1011_Reserviert" Datatype="Bool" />
+      <Member Name="bA1012_Reserviert" Datatype="Bool" />
+      <Member Name="bA1013_Reserviert" Datatype="Bool" />
+      <Member Name="bA1014_Reserviert" Datatype="Bool" />
+      <Member Name="bA1015_Reserviert" Datatype="Bool" />
+      <Member Name="bA1016_Reserviert" Datatype="Bool" />
+      <Member Name="bA1017_WarnungKeineLizenzVorhanden" Datatype="Bool" />
+      <Member Name="bA1018_WarnungSpeisungHeizung230V" Datatype="Bool" />
+      <Member Name="bA1019_WarnungSelektivitätsmodul" Datatype="Bool" />
+      <Member Name="bA1020_WarnungLastschalter" Datatype="Bool" />
+      <Member Name="bA1021_WarnungHauptschalter" Datatype="Bool" />
+      <Member Name="bA1022_WarnungHauptkontakteLaststromkreis" Datatype="Bool" />
+      <Member Name="bA1023_WarnungI/O-KommunikationWT3" Datatype="Bool" />
+      <Member Name="bA1024_WarnungI/O-KonfigurationWT3" Datatype="Bool" />
+      <Member Name="b631_Reserve" Datatype="Bool" />
+      <Member Name="b632_Reserve" Datatype="Bool" />
+      <Member Name="b633_Reserve" Datatype="Bool" />
+      <Member Name="b634_Reserve" Datatype="Bool" />
+      <Member Name="b635_Reserve" Datatype="Bool" />
+      <Member Name="b636_Reserve" Datatype="Bool" />
+      <Member Name="b637_Reserve" Datatype="Bool" />
+      <Member Name="by64_Reserve" Datatype="Byte" />
+      <Member Name="by65_Reserve" Datatype="Byte" />
+      <Member Name="by66_Reserve" Datatype="Byte" />
+      <Member Name="by67_Reserve" Datatype="Byte" />
+      <Member Name="by68_Reserve" Datatype="Byte" />
+      <Member Name="by69_Reserve" Datatype="Byte" />
+      <Member Name="by70_Reserve" Datatype="Byte" />
+      <Member Name="by71_Reserve" Datatype="Byte" />
+      <Member Name="by72_Reserve" Datatype="Byte" />
+      <Member Name="by73_Reserve" Datatype="Byte" />
+      <Member Name="by74_Reserve" Datatype="Byte" />
+      <Member Name="by75_Reserve" Datatype="Byte" />
+      <Member Name="by76_Reserve" Datatype="Byte" />
+      <Member Name="by77_Reserve" Datatype="Byte" />
+      <Member Name="by78_Reserve" Datatype="Byte" />
+      <Member Name="by79_Reserve" Datatype="Byte" />
+      <Member Name="by80_Reserve" Datatype="Byte" />
+      <Member Name="by81_Reserve" Datatype="Byte" />
+      <Member Name="by82_Reserve" Datatype="Byte" />
+      <Member Name="by83_Reserve" Datatype="Byte" />
+      <Member Name="by84_Reserve" Datatype="Byte" />
+      <Member Name="by85_Reserve" Datatype="Byte" />
+      <Member Name="by86_Reserve" Datatype="Byte" />
+      <Member Name="by87_Reserve" Datatype="Byte" />
+      <Member Name="by88_Reserve" Datatype="Byte" />
+      <Member Name="by89_Reserve" Datatype="Byte" />
+      <Member Name="by90_Reserve" Datatype="Byte" />
+      <Member Name="by91_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="Zustand" Datatype="Struct">
+      <Member Name="bAlarmzustandAktiv" Datatype="Bool" />
+      <Member Name="bWarnzustandAktiv" Datatype="Bool" />
+      <Member Name="bSystemMeldungAktiv" Datatype="Bool" />
+      <Member Name="bSeviceMeldungAktiv" Datatype="Bool" />
+      <Member Name="bStopManuell" Datatype="Bool" />
+      <Member Name="bStopAuto" Datatype="Bool" />
+      <Member Name="bStopExtern" Datatype="Bool" />
+      <Member Name="bBetriebAuto" Datatype="Bool" />
+      <Member Name="bBetriebManuell" Datatype="Bool" />
+      <Member Name="bAnlaufAuto" Datatype="Bool" />
+      <Member Name="bAnlaufManuell" Datatype="Bool" />
+      <Member Name="bManuellStoppen" Datatype="Bool" />
+      <Member Name="b934_Reserve" Datatype="Bool" />
+      <Member Name="b935_Reserve" Datatype="Bool" />
+      <Member Name="b936_Reserve" Datatype="Bool" />
+      <Member Name="b937_Reserve" Datatype="Bool" />
+      <Member Name="by94_Reserve" Datatype="Byte" />
+      <Member Name="bSystemMeldungKonfigUmschaltung" Datatype="Bool" />
+      <Member Name="b951_Reserve" Datatype="Bool" />
+      <Member Name="b952_Reserve" Datatype="Bool" />
+      <Member Name="b953_Reserve" Datatype="Bool" />
+      <Member Name="b954_Reserve" Datatype="Bool" />
+      <Member Name="b955_Reserve" Datatype="Bool" />
+      <Member Name="b956_Reserve" Datatype="Bool" />
+      <Member Name="b957_Reserve" Datatype="Bool" />
+      <Member Name="by96_Reserve" Datatype="Byte" />
+      <Member Name="by97_Reserve" Datatype="Byte" />
+      <Member Name="by98_Reserve" Datatype="Byte" />
+      <Member Name="by99_Reserve" Datatype="Byte" />
+      <Member Name="by100_Reserve" Datatype="Byte" />
+      <Member Name="by101_Reserve" Datatype="Byte" />
+      <Member Name="by102_Reserve" Datatype="Byte" />
+      <Member Name="by103_Reserve" Datatype="Byte" />
+      <Member Name="by104_Reserve" Datatype="Byte" />
+      <Member Name="by105_Reserve" Datatype="Byte" />
+      <Member Name="by106_Reserve" Datatype="Byte" />
+      <Member Name="by107_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigIn" Datatype="Struct">
+      <Member Name="bKonfigSatzBit0" Datatype="Bool" />
+      <Member Name="bKonfigSatzBit1" Datatype="Bool" />
+      <Member Name="bFreigabeTempRegler" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktRegler1" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktRegler2" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktregler3" Datatype="Bool" />
+      <Member Name="bFreigabeZweipunktregler4" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler1" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler2" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler3" Datatype="Bool" />
+      <Member Name="bFreigabePIRegler4" Datatype="Bool" />
+      <Member Name="bPiRegler1SollwertB" Datatype="Bool" />
+      <Member Name="bPiRegler2SollwertB" Datatype="Bool" />
+      <Member Name="bPiRegler3SollwertB" Datatype="Bool" />
+      <Member Name="bPiRegler4SollwertB" Datatype="Bool" />
+      <Member Name="bAuxDigital1" Datatype="Bool" />
+      <Member Name="bAuxDigital2" Datatype="Bool" />
+      <Member Name="bAuxDigital3" Datatype="Bool" />
+      <Member Name="bAuxDigital4" Datatype="Bool" />
+      <Member Name="bAuxDigital5" Datatype="Bool" />
+      <Member Name="bAuxDigital6" Datatype="Bool" />
+      <Member Name="bAuxDigital7" Datatype="Bool" />
+      <Member Name="bAuxDigital8" Datatype="Bool" />
+      <Member Name="b1107_Reserve" Datatype="Bool" />
+      <Member Name="by111_Reserve" Datatype="Byte" />
+      <Member Name="by112_Reserve" Datatype="Byte" />
+      <Member Name="by113_Reserve" Datatype="Byte" />
+      <Member Name="by114_Reserve" Datatype="Byte" />
+      <Member Name="by115_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="DigOut" Datatype="Struct">
+      <Member Name="bAlarm" Datatype="Bool" />
+      <Member Name="bWarnung" Datatype="Bool" />
+      <Member Name="bTemperaturregler" Datatype="Bool" />
+      <Member Name="bZweipunktrelger1" Datatype="Bool" />
+      <Member Name="bZweipunktrelger2" Datatype="Bool" />
+      <Member Name="bZweipunktregler3" Datatype="Bool" />
+      <Member Name="bZweipunktregler4" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung1" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung2" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung3" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung4" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung5" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung6" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung7" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung8" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung9" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung10" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung11" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung12" Datatype="Bool" />
+      <Member Name="bQInverter1" Datatype="Bool" />
+      <Member Name="bQInverter2" Datatype="Bool" />
+      <Member Name="bQInverter3" Datatype="Bool" />
+      <Member Name="bQInverter4" Datatype="Bool" />
+      <Member Name="bQZeitglied1" Datatype="Bool" />
+      <Member Name="bQZeitglied2" Datatype="Bool" />
+      <Member Name="bQZeitglied3" Datatype="Bool" />
+      <Member Name="bQZeitglied4" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop1" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop2" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop3" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop4" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop5" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop6" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop7" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop8" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop9" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop10" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop11" Datatype="Bool" />
+      <Member Name="bQRsFlipFlop12" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung13" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung14" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung15" Datatype="Bool" />
+      <Member Name="bQDigitaleVerknüpfung16" Datatype="Bool" />
+      <Member Name="bSammelkanal1" Datatype="Bool" />
+      <Member Name="bSammelkanal2" Datatype="Bool" />
+      <Member Name="bSammelkanal3" Datatype="Bool" />
+      <Member Name="bSammelkanal4" Datatype="Bool" />
+      <Member Name="bSammelkanal5" Datatype="Bool" />
+      <Member Name="bSammelkanal6" Datatype="Bool" />
+      <Member Name="b1221_Reserve" Datatype="Bool" />
+      <Member Name="b1222_Reserve" Datatype="Bool" />
+      <Member Name="b1223_Reserve" Datatype="Bool" />
+      <Member Name="b1224_Reserve" Datatype="Bool" />
+      <Member Name="b1225_Reserve" Datatype="Bool" />
+      <Member Name="b1226_Reserve" Datatype="Bool" />
+      <Member Name="b1227_Reserve" Datatype="Bool" />
+      <Member Name="by123_Reserve" Datatype="Byte" />
+    </Member>
+    <Member Name="iKonfigSatz" Datatype="Int" />
+    <Member Name="rZweipunktregler1Istwert" Datatype="Real" />
+    <Member Name="rZweipunktregler2Istwert" Datatype="Real" />
+    <Member Name="rZweipunktregler3Istwert" Datatype="Real" />
+    <Member Name="rZweipunktregler4Istwert" Datatype="Real" />
+    <Member Name="rPiRegler1Istwert" Datatype="Real" />
+    <Member Name="rPiRegler1Sollwert" Datatype="Real" />
+    <Member Name="diPiRegler1Sollwertrampe" Datatype="DInt" />
+    <Member Name="rPiRegler1Stellwert" Datatype="Real" />
+    <Member Name="rPiRegler2Istwert" Datatype="Real" />
+    <Member Name="rPiRegler2Sollwert" Datatype="Real" />
+    <Member Name="diPiRegler2Sollwertrampe" Datatype="DInt" />
+    <Member Name="rPiRegler2Stellwert" Datatype="Real" />
+    <Member Name="rPiRegler3Istwert" Datatype="Real" />
+    <Member Name="rPiRegler3Sollwert" Datatype="Real" />
+    <Member Name="diPiRegler3Sollwertrampe" Datatype="DInt" />
+    <Member Name="rPiRegler3Stellwert" Datatype="Real" />
+    <Member Name="rPiRegler4Istwert" Datatype="Real" />
+    <Member Name="rPiRegler4Sollwert" Datatype="Real" />
+    <Member Name="diPiRegler4Sollwertrampe" Datatype="DInt" />
+    <Member Name="rPiRegler4Stellwert" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung1" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung1" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung1" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung2" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung2" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung2" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung3" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung3" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung3" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung4" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung4" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung4" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung5" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung5" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung5" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung6" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung6" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung6" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung7" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung7" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung7" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung8" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung8" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung8" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung9" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung9" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung9" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung10" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung10" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung10" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung11" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung11" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung11" Datatype="Real" />
+    <Member Name="rI1AnalogeVerknüpfung12" Datatype="Real" />
+    <Member Name="rI2AnalogeVerknüpfung12" Datatype="Real" />
+    <Member Name="rQAnalogeVerknüpfung12" Datatype="Real" />
+    <Member Name="rISequenz1" Datatype="Real" />
+    <Member Name="rQSequenz1" Datatype="Real" />
+    <Member Name="rISequenz2" Datatype="Real" />
+    <Member Name="rQSequenz2" Datatype="Real" />
+    <Member Name="rISequenz3" Datatype="Real" />
+    <Member Name="rQSequenz3" Datatype="Real" />
+    <Member Name="rISequenz4" Datatype="Real" />
+    <Member Name="rQSequenz4" Datatype="Real" />
+    <Member Name="rISequenz5" Datatype="Real" />
+    <Member Name="rQSequenz5" Datatype="Real" />
+    <Member Name="rISequenz6" Datatype="Real" />
+    <Member Name="rQSequenz6" Datatype="Real" />
+    <Member Name="rISequenz7" Datatype="Real" />
+    <Member Name="rQSequenz7" Datatype="Real" />
+    <Member Name="rISequenz8" Datatype="Real" />
+    <Member Name="rQSequenz8" Datatype="Real" />
+    <Member Name="rISequenz9" Datatype="Real" />
+    <Member Name="rQSequenz9" Datatype="Real" />
+    <Member Name="rISequenz10" Datatype="Real" />
+    <Member Name="rQSequenz10" Datatype="Real" />
+    <Member Name="rISequenz11" Datatype="Real" />
+    <Member Name="rQSequenz11" Datatype="Real" />
+    <Member Name="rISequenz12" Datatype="Real" />
+    <Member Name="rQSequenz12" Datatype="Real" />
+    <Member Name="rIUmrechnung1" Datatype="Real" />
+    <Member Name="rQUmrechnung1" Datatype="Real" />
+    <Member Name="rIUmrechnung2" Datatype="Real" />
+    <Member Name="rQUmrechnung2" Datatype="Real" />
+    <Member Name="rIUmrechnung3" Datatype="Real" />
+    <Member Name="rQUmrechnung3" Datatype="Real" />
+    <Member Name="rIUmrechnung4" Datatype="Real" />
+    <Member Name="rQUmrechnung4" Datatype="Real" />
+    <Member Name="rIRampe1" Datatype="Real" />
+    <Member Name="rQRampe1" Datatype="Real" />
+    <Member Name="rIRampe2" Datatype="Real" />
+    <Member Name="rQRampe2" Datatype="Real" />
+    <Member Name="rIRampe3" Datatype="Real" />
+    <Member Name="rQRampe3" Datatype="Real" />
+    <Member Name="rIRampe4" Datatype="Real" />
+    <Member Name="rQRampe4" Datatype="Real" />
+    <Member Name="byReserve" Datatype="Array[510..629] of Byte" />
+  </Section>
+</Sections></Interface>
+      <Name>WT3_Plattform_Status_UDT</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-CH</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>
