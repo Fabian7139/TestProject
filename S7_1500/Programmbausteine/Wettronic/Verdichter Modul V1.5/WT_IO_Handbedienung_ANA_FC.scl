@@ -1,0 +1,74 @@
+﻿FUNCTION "WT_IO_Handbedienung_ANA_FC" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      rEingang_I : Real;
+      rHandWert_I : Real;
+   END_VAR
+
+   VAR_OUTPUT 
+      iZustand_O : Int;   // 0=Auto / 10=Hand
+      rAusgang_O : Real;
+   END_VAR
+
+   VAR_IN_OUT 
+      bHandAktiv_IO : Bool;   // Globale Hand Variable
+      iBetriebsart_IO : Int;   // 0=Auto / 1=Hand
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* WT IO Handbedienung ANALOG
+	*
+	* Beschreibung     :     WT IO Handbedienung
+	* Erstellt         :     jf
+	* Erstellungsdatum :     04.12.2018
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        04.12.2018        jf            -Neu erstellt
+	*                                               
+	*)
+	
+	
+	CASE #iBetriebsart_IO OF
+	    0:  // AUTO
+	        #iZustand_O := 0;
+	        #rAusgang_O := #rEingang_I;
+	        
+	    1:  // Hand 
+	        #iZustand_O := 10;
+	        #bHandAktiv_IO := TRUE;
+	        
+	        #rAusgang_O := #rHandWert_I;
+	        
+	    ELSE  // Statement section ELSE
+	        #iBetriebsart_IO := 0;
+	END_CASE;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+END_FUNCTION
+

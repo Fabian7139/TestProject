@@ -1,0 +1,54 @@
+﻿ORGANIZATION_BLOCK "Weckalarm PID Aufrufe_OB"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR CONSTANT 
+      tCyclicTime : Time := T#300ms;
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* Bildbausteine
+	*
+	* Beschreibung     :     OB30
+	* Erstellt         :     jf
+	* Erstellungsdatum :     29.11.2018
+	*
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        29.11.2018      jf              - erster Release   
+	*      
+	*)
+	
+	(* Abhängigkeiten
+	*  -
+	*)
+	
+	
+	// Aufruf PID Standard Bausteine
+	(*
+	"WW_PIDRegler_IDB"(rIstwert_I:=AI_Temp_IDB.rWert,
+	                   iErsterHinweis_I :=0,
+	                   bCompleteRestart_I:=NOT "M_M300_IDB".bBetrieb_IO,
+	                   tCycleTime_I:=#tCyclicTime,
+	                   rStellgroesse_IO := #rDummy);*)
+	
+	
+	
+	
+END_ORGANIZATION_BLOCK
+

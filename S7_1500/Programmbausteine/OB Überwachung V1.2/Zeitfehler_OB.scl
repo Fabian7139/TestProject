@@ -1,0 +1,36 @@
+﻿ORGANIZATION_BLOCK "Zeitfehler_OB"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* Zeitfehler
+	*
+	* Beschreibung     :     OB80
+	* Erstellt         :     mh
+	* Erstellungsdatum :     01.02.2024
+	*
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00          02.02.2024      mh              - erster Release   
+	*      
+	*)
+	
+	"Zyklus_DB".OB80.diCount += 1;
+	
+END_ORGANIZATION_BLOCK
+

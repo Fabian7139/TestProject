@@ -1,0 +1,95 @@
+﻿FUNCTION "WW_WT3ModbusDatenLesen_FC" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_IN_OUT 
+      feldbusHeader_IO : "WT3_Feldbus_Header";
+      vModbusData_IO : Variant;
+      bAlarmHandshake_IO : Bool;
+   END_VAR
+
+   VAR_TEMP 
+      bTON_IN_PREV : Bool;
+      iMovBlkVarState : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      tHandshakeKontrolle : Time := T#30s;
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Bernstrasse 2a
+	* 3600 Thun
+	*
+	* Wettronic 3 Modul
+	*
+	* Beschreibung     :     WT3 Modbus Daten lesen
+	* Erstellt         :     sf
+	* Erstellungsdatum :     29.10.2025
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        06.01.2026       sf             -Erste Version
+	* 
+	*)
+	
+	IF #feldbusHeader_IO.uiMbStartadresse <> 0 THEN
+	    REGION Modbus Daten übergeben
+	            #iMovBlkVarState := MOVE_BLK_VARIANT(SRC := "WW_WT3HoldingRegister_DB".Data.Index,
+	                                                 COUNT := #feldbusHeader_IO.uiCount,
+	                                                 SRC_INDEX := #feldbusHeader_IO.uiMbStartadresse - 1, // SRC_INDEX wird nullbasiert berechnet daher -1 (ModbusRegister startet mit Element 1)
+	                                                 DEST_INDEX := 0,
+	                                                 DEST => #vModbusData_IO);
+	    END_REGION
+	    
+	    REGION Handshake Überwachung
+	        REGION TON Timer
+	            // Fehlverhalten von TON Timer abfangen falls sie reinitialisiert werden und stehen bleiben
+	            #bTON_IN_PREV := #feldbusHeader_IO.TON_Handshake.IN; // Trigger Zustand aus letztem Zyklus speichern
+	            #feldbusHeader_IO.TON_Handshake(IN := #iMovBlkVarState <> 0 OR // Prüfen ob das Übergeben der Modbusdaten erfolgreich war
+	                                         "WW_WT3HoldingRegister_DB".Data.Index[#feldbusHeader_IO.uiMbStartadresse] <> 1, // Handshake prüfen
+	                                         PT := #tHandshakeKontrolle);
+	            
+	            IF #bTON_IN_PREV AND #feldbusHeader_IO.TON_Handshake.IN AND NOT #feldbusHeader_IO.TON_Handshake.Q AND #feldbusHeader_IO.TON_Handshake.ET = T#0ms THEN
+	                RESET_TIMER(#feldbusHeader_IO.TON_Handshake);
+	            END_IF;
+	        END_REGION
+	        
+	        // Handshake rücksetzen (erstes Array-Element = Startadresse)
+	        "WW_WT3HoldingRegister_DB".Data.Index[#feldbusHeader_IO.uiMbStartadresse] := 0;
+	        
+	        // Bei Kommunikationsausfall, Bereich im Holding Register mit 0 füllen, Werte in DB rücksetzen
+	        IF #feldbusHeader_IO.TON_Handshake.Q THEN
+	            FILL_BLK(IN := 0,
+	                     COUNT := #feldbusHeader_IO.uiCount,
+	                     OUT => "WW_WT3HoldingRegister_DB".Data.Index[#feldbusHeader_IO.uiMbStartadresse]);
+	            
+	            #iMovBlkVarState := MOVE_BLK_VARIANT(SRC := "WW_WT3HoldingRegister_DB".Data.Index,
+	                                                 COUNT := #feldbusHeader_IO.uiCount,
+	                                                 SRC_INDEX := #feldbusHeader_IO.uiMbStartadresse - 1, // SRC_INDEX wird nullbasiert berechnet daher -1 (ModbusRegister startet mit Element 1)
+	                                                 DEST_INDEX := 0,
+	                                                 DEST => #vModbusData_IO);
+	        END_IF;
+	    END_REGION
+	ELSE
+	    // Handshaketimer resettieren
+	    RESET_TIMER(#feldbusHeader_IO.TON_Handshake);
+	END_IF;
+	
+	// Alarm setzen
+	#feldbusHeader_IO.bKommAlarm := #feldbusHeader_IO.TON_Handshake.Q;
+	#bAlarmHandshake_IO := #bAlarmHandshake_IO OR #feldbusHeader_IO.TON_Handshake.Q;
+	
+END_FUNCTION
+

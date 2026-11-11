@@ -1,0 +1,41 @@
+﻿ORGANIZATION_BLOCK "Baugruppenträgerausfall_OB"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* Bildbausteine
+	*
+	* Beschreibung     :     OB86
+	* Erstellt         :     jf
+	* Erstellungsdatum :     29.11.2018
+	*
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        29.11.2018      jf              - erster Release   
+	*      
+	*)
+	
+	(* Abhängigkeiten
+	*  Zyklus_DB
+	*)
+	
+	IF #Event_Class = 16#39 THEN // Nur Kommende Ereignise zählen
+	    "Zyklus_DB".OB86.diCount += 1;
+	END_IF;
+END_ORGANIZATION_BLOCK
+

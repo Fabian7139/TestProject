@@ -1,0 +1,60 @@
+﻿FUNCTION "ByteToCharDEZ_FC" : Void
+{ S7_Optimized_Access := 'FALSE' }
+AUTHOR : indico
+VERSION : 0.1
+   VAR_INPUT 
+      byte_I : Byte;
+   END_VAR
+
+   VAR_OUTPUT 
+      charH_O : Char;
+      charL_O : Char;
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* Zeitsynchronisation
+	*
+	* Beschreibung     :     Byte to Char (nur zwei stellige Nummern!)
+	* Erstellt         :     jf
+	* Erstellungsdatum :     29.01.2016
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        29.01.2016        jf            -Neu erstellt
+	*  V1.01        29.01.2016        jf            -I/O Paremter umbenennt (indico Konfention)
+	*                                               
+	*)
+	
+	
+	(* Abhängikeiten
+	* - BYTE_TO_CHAR
+	*)
+	
+	
+	
+	IF #byte_I < 100 AND #byte_I >= 0 THEN
+	    #charL_O := BYTE_TO_CHAR((#byte_I MOD 10) + 48);
+	    #charH_O := BYTE_TO_CHAR((#byte_I / 10) + 48);
+	ELSE
+	    #charL_O := '?';
+	    #charH_O := '?';
+	END_IF;
+	
+	
+END_FUNCTION
+

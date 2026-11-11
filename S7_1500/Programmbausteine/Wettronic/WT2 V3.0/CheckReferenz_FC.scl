@@ -1,0 +1,51 @@
+﻿FUNCTION "CheckReferenz_FC" : Bool
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   VAR_INPUT 
+      stReferenz : Any;
+   END_VAR
+
+   VAR_TEMP 
+      pAny : Any;
+      atAny AT pAny : Struct
+         byID : Byte;
+         byType : Byte;
+         iNum : Int;
+         iDbn : Int;
+         dwPtr : DWord;
+      END_STRUCT;
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* CheckReferenz_FC
+	*
+	* Beschreibung     :     Hilfsfunktion zur Überprüfung der Gültigkeit eines Referenzparameters
+	* Erstellt         :     bl
+	* Erstellungsdatum :     10.12.2018
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        10.12.2018       bl             -Neu erstellt
+	*                                               
+	*)
+	
+	#pAny := #stReferenz;
+	#CheckReferenz_FC := (#atAny.iDbn <> 0);
+	    
+END_FUNCTION
+

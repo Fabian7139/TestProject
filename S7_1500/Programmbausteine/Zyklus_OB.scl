@@ -1,0 +1,119 @@
+﻿ORGANIZATION_BLOCK "Zyklus_OB"
+TITLE = Zyklus_OB
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : indico
+VERSION : 1.3
+   VAR_TEMP 
+      iZeitOk : Int;
+      bRunning : Bool;
+   END_VAR
+
+
+BEGIN
+	(*****************************************************************************
+	* TIA-SOFTWARE
+	* W. Wettstein AG, 3073 Gümligen
+	* ========================================
+	*
+	* INDICO ELECTRONIC AG
+	* Mattenstrasse 11
+	* 3073 Gümligen
+	*
+	* Bildbausteine
+	*
+	* Beschreibung     :     OB1
+	* Erstellt         :     jf
+	* Erstellungsdatum :     29.11.2018
+	*
+	******************************************************************************)
+	
+	(*
+	*  Aenderungs- und Versionshistory
+	*
+	*  Version      | Datum         | Autor         | Aenderungen
+	*  -------------------------------------------------------------
+	*
+	*  V1.00        29.11.2018      jf              - erster Release  
+	*  V1.10        14.11.2019      sf              - Initialisierung Sytemstarttimer ergänzt
+	*  V1.20        05.02.2020      sf              - Neues Init-Bit für den Anlagenbereich "Zyklus_DB".bInitRunning benötigt in Bildbausteinen
+	*  V1.30        23.06.2023      sf              - iAS durch WMS ersetzt
+	*      
+	*)
+	
+	(* Abhängigkeiten
+	*  - Diverses / Anlagen spezifisch
+	*)
+	
+	
+	// WMS
+	"WMS_MessageInterface_IDB"();
+	
+	// Systemzeit auslesen
+	#iZeitOk := RD_LOC_T(OUT => "Zyklus_DB".dtlSystemzeit);
+	
+	// Überwachungen / AnaIn / Kommunikation etc.
+	"OB_Überwachung_DB"();
+	"Austauschsignale_FC"();
+	
+	// Bit für Systemstart setzen
+	IF "Zyklus_DB".bInit THEN
+	    "Zyklus_DB".bSystemstart := FALSE;
+	ELSE
+	    "Zyklus_DB".bSystemstart := TRUE;
+	END_IF;
+	
+	
+	// Systemstart
+	"Zyklus_DB".Timer.Systemstart(IN := "Zyklus_DB".bSystemstart,
+	                              PT := T#20s,
+	                              Q => #bRunning);
+	
+	
+	//Impulsmerker (s,min,h)
+	"Impulsmerker_IDB"();
+	"IBS_Merker_FALSE" := "AlwaysFALSE";
+	"IBS_Merker_TRUE" := "AlwaysTRUE";
+	
+	
+	// Hinweis "Startup"
+	"WMS_hw_Startup_DB"(bTrigger := NOT #bRunning,
+	                    wEreignis_ID := 4,
+	                    wBezeichnung_ID := 0);
+	
+	
+	IF (#bRunning) THEN
+	    
+	    // Anlage
+	    
+	    
+	    
+	    
+	    
+	    
+	    // Ganz am Schluss von IF(bRunning)Then! Initalisierung Anlagenbereich fertig.
+	    "Zyklus_DB".bInitRunning := FALSE;
+	END_IF;
+	
+	REGION Hinweis In- / Outputbaustein setzen
+	  "WMS_hw_InOutput_DB"(bTrigger := "WMS_WinCC_Div_DB".bHinweistriggerInOutput,
+	                      wEreignis_ID := 5,
+	                      wBezeichnung_ID := 0);
+	  
+	  "WMS_WinCC_Div_DB".bHinweistriggerInOutput := FALSE; // Trigger zurücksetzen
+	END_REGION
+	
+	// Ganz am Schluss von OB1! Initalisierung fertig.
+	"Zyklus_DB".bInit := FALSE;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+END_ORGANIZATION_BLOCK
+
